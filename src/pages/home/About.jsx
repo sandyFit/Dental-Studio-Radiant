@@ -43,10 +43,14 @@ const About = () => {
   }, []);
     return (
         <Element id='about'
-            className='flex flex-col py-[3rem] bg-navyBlue rounded-t-[30px]' >
+            className='flex flex-col py-[3rem] bg-navyBlue rounded-t-[30px] pt-20' >
             {/* <MotionText 
                 text={'Welcome to Radiant Dental Studio'}
             /> */}
+
+            <span className='text-xxsmall-white ml-12'>
+                [01] About Us 
+            </span>
 
             <div className="relative py-[3rem] flex flex-col xl:flex-row justify-center items-center gap-16 md:gap-24">
                 

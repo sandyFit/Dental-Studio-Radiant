@@ -56,10 +56,11 @@
 /*========= Gradient Text ========*/
 
 .app-title {
-        background: linear-gradient( rgb(34, 147, 252) 0%, rgb(155,81,224) 90%);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-    }
+    background: linear-gradient( rgb(34, 147, 252) 0%, rgb(155,81,224) 90%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    z-index: 0;
+}
 
 
 /*================ABOUT TITLE ANIMATION================*/
@@ -77,6 +78,19 @@
     display: inline-block;
     white-space: nowrap;
     animation: slideLeft 10s linear infinite;
+}
+
+@keyframes rotateIcon {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.rotating-icon {
+  animation: rotateIcon 3s linear infinite;
 }
 
 /*  Hover for gradient buttons*/
@@ -140,6 +154,12 @@
             
     }
 
+    .text-xxsmall-white {
+        @apply  font-[600] uppercase text-slate-500
+    }
+    .text-xsmall-white {
+        @apply text-lg font-[600] uppercase text-slate-500
+    }
     .text-small-white {
         @apply text-xl font-[600] uppercase text-slate-500
     }
@@ -149,7 +169,7 @@
     }
 
     .big-title {
-        @apply text-[10rem] font-[800] text-navyBlue leading-[130px]
+        @apply text-[11rem] font-[800] text-navyBlue leading-[150px]
     }
 
 

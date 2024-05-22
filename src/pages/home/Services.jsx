@@ -26,10 +26,11 @@ const Services = () => {
         }
     }
         
-
-
     return (
-        <section className='flex justify-center py-2 xl:py-12 bg-navyBlue'>
+        <section className='w-full flex justify-center pb-2 xl:pb-40 pt-1 xl:pt-20 bg-navyBlue rounded-b-[30px]'>
+            <span className='text-xxsmall-white ml-12 absolute left-2'>
+                [02] Services 
+            </span>
             <div className="flex flex-col items-center gap-8 relative">
                 <h2 className='text-center text-white3 text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
                     w-2/3 md:w-2/4 lg:w-3/5 pt-2 lg:pt-4' data-aos="fade-up">
@@ -48,7 +49,8 @@ const Services = () => {
                     enhancing both the aesthetics and longevity of your smile.
                 </p>
                   
-                <article className="flex flex-wrap gap-20 w-full md:w-4/5 lg:w-4/5 mt-4 justify-center" data-aos='zoom-in-up'>
+                <article className="flex flex-wrap gap-20 w-full md:w-4/5 lg:w-4/5 mt-4 justify-center"
+                    data-aos='zoom-in-up'>
                     {servicesCardData.map((service, index) => (
                         <div key={index} className=''>                    
                             <ServicesCard
