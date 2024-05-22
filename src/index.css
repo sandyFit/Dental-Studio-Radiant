@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Hind+Siliguri:wght@300;400;500&family=Inter:wght@100..900&family=WindSong&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(29, 52, 93, 0.8);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.app-title {
+    background: linear-gradient( rgb(34, 147, 252) 0%, rgb(155,81,224) 90%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* ========= Curtain effect for the Hero section ========== */
+
+@keyframes slideCurtain {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes fadeOutCurtain {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation-name: fadeOutCurtain;
+    animation-duration: 3s; /* Adjust the duration to match your preference */
+    animation-fill-mode: forwards; /* Keeps the curtain at final state (fully transparent) */
+}
+
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/*========= Gradient Text ========*/
+
+.app-title {
+        background: linear-gradient( rgb(34, 147, 252) 0%, rgb(155,81,224) 90%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+
+/*================ABOUT TITLE ANIMATION================*/
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.motion-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slideLeft 10s linear infinite;
+}
+
+/*  Hover for gradient buttons*/
+.btn-filled:hover {
+  background-color: #0084FF !important; /* Azure color */
+  background-image: none !important;
+}
+
+/*  GRADIENT BORDER */
+.gradient-border {
+    position: relative;
+}
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit; /* Match the border-radius of the element */
+    background: linear-gradient(135deg, rgba(6,147,227,1) 0%, rgb(155,81,224) 100%);
+    border-radius: inherit; /* Match the border-radius of the element */
+    clip-path: polygon(0% 0%, 0% 100%, 4px 100%, 4px 4px, calc(100% - 4px) 4px, calc(100% - 4px) 
+                calc(100% - 4px), 4px calc(100% - 4px), 4px 100%, 100% 100%, 100% 0%); 
+    pointer-events: none; /* Allows clicks to pass through */   
+}
+
+
+@layer base {
+    html {
+        @apply font-[62.5%] box-border 
+    }
+
+    body {
+        @apply m-0 p-0 font-sans bg-zinc-300
+    }
+
+    button, a {
+        @apply cursor-pointer
+    }
+}
+
+@layer components {
+    .button {
+        @apply text-center font-bold tracking-widest focus:outline-none border-2  rounded-lg text-xl uppercase;
+    }
+}
+
+@layer utilities {
+    .line {
+        @apply w-[3.5rem] h-[.1rem] bg-[#000]
+    }
+
+    .line-1, .line-3 {
+        @apply w-[2.2rem] transition-all duration-300
+    }
+
+    .menu-icon:hover .line {
+        width: 3.5rem;
+    }
+
+    .btn-filled {
+        @apply button text-zinc-50 bg-custom-gradient-btn  border-zinc-50
+            
+    }
+
+    .text-small-white {
+        @apply text-xl font-[600] uppercase text-slate-500
+    }
+
+    .text-small-dark {
+        @apply text-xl font-[600]  text-zinc-950
+    }
+
+    .big-title {
+        @apply text-[10rem] font-[800] text-navyBlue leading-[130px]
+    }
+
+
 }
