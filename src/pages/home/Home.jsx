@@ -8,6 +8,7 @@ import TransitionAbout from '../transitions/TransitionAbout';
 import Services from './Services';
 import Team from './Team';
 import Reviews from './Reviews';
+import Faqs from './Faqs';
 
 const Home = () => {
 
@@ -97,6 +98,9 @@ const Home = () => {
             </section>
             <section id='reviews' className=''>
                 <Reviews/>
+            </section>
+            <section id='faq' className=''>
+                <Faqs/>
             </section>
         </div>
     )
