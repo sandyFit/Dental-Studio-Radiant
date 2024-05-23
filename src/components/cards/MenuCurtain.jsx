@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import BookOnlineBtn from '../ui/BookOnlineBtn';
 
 
 const MenuCurtain = ({ isMenuOpen }) => {
@@ -10,18 +11,18 @@ const MenuCurtain = ({ isMenuOpen }) => {
 
     return (
         <article className='flex flex-col justify-center
-            rounded-3xl bg-custom-gradient-bg-cards p-36 menu-article z-30'
+            rounded-3xl bg-custom-gradient-bg-cards px-44 py-20 menu-article z-30'
             style={{
                 transform: isMenuOpen ? 'translateX(0)' : 'translateX(-100%)'
             }}
         >
             {/* Menu items */}
 
-            <ul className="flex flex-col items-start gap-6" >
+            <ul className="flex flex-col items-start gap-3" >
                 {/* Dynamivally setting the data-aos based on item index */}
-                {['hero', 'about', 'services', 'team', 'reviews', 'faq', 'contact']
+                {['index', 'about', 'services', 'team', 'reviews', 'faq', 'contact']
                     .map((item, index) => (
-                        <li className='text-white3 text-6xl font-anybody font-bold hover:opacity-75'
+                        <li className='text-zinc-50 text-[3rem] leading-[50px] font-anybody font-bold hover:text-opacity-65'
                             data-aos="fade-up"
                             data-aos-delay={`${baseDealy + index * delayIncrement}`} // Calcualte delay
                             key={item}
@@ -32,6 +33,10 @@ const MenuCurtain = ({ isMenuOpen }) => {
                             </ScrollLink>
                         </li>
                     ))}
+                
+                <button className='btn-book-online-transparent px-12 py-2 mt-9'>
+                    <BookOnlineBtn/>
+                </button>
            
             </ul>      
         </article>

@@ -132,7 +132,7 @@
 
 @layer components {
     .button {
-        @apply text-center font-bold tracking-widest focus:outline-none border-2  rounded-lg text-xl uppercase;
+        @apply text-center font-bold tracking-widest focus:outline-none border-2  rounded-lg uppercase;
     }
 }
 
@@ -149,8 +149,12 @@
         width: 3.5rem;
     }
 
-    .btn-filled {
+    .btn-book-online {
         @apply button text-zinc-50 bg-custom-gradient-btn  border-zinc-50
+            
+    }
+    .btn-book-online-transparent {
+        @apply button text-navyBlue bg-sky-50 bg-opacity-45 border-2  border-zinc-50
             
     }
 
@@ -194,6 +198,13 @@
 
     .work__photo-item img {
         @apply block w-full h-full object-cover
+    }
+
+    .font-outline-2 {
+        -webkit-text-stroke: 2px white;
+    }
+    .font-outline-4 {
+        -webkit-text-stroke: 4px white;
     }
 
 

@@ -7,13 +7,13 @@ const MotionText = ({icon, part1, part2, part3}) => {
             style={{ overflow: 'hidden' }}>
             <h2 className='text-center text-navyBlue motion-text font-regular '>
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
-                    <span className='text-navyBlue mx-20 rotating-icon'>{icon}</span>
+                    <span className='text-zinc-50 text-opacity-45 font-outline-2 mx-20 rotating-icon'>{icon}</span>
                     <span className='text-navyBlue mr-10'>
                         {part1} 
                     </span>
                     <span className="app-title mr-10">{part2}</span>
                     <span className="text-navyBlue">{part3}</span>
-                    <span className='text-navyBlue mx-20 rotating-icon'>{icon}</span>
+                    <span className='text-zinc-50 text-opacity-45 font-outline-2 mx-20 rotating-icon'>{icon}</span>
                     <span className='text-navyBlue mr-10'>
                         {part1} 
                     </span>

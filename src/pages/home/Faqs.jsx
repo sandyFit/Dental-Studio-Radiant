@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import QuestionCard from '../../components/cards/QuestionCard';
 import questions from '../../data/questions';
-import UnderlineText from '../../components/ui/UnderlineText';
 
 const Faqs = () => {
 
@@ -25,12 +24,12 @@ const Faqs = () => {
                 </h2>
                 <div>
                     <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
-                        pt-6 pb-10' >
+                        pt-6 pb-10'data-aos='fade-up'>
                         We Have Answers                                          
                     </h2>     
                 </div> 
 
-                <div className="flex flex-col justify-center items-center space-y-6 pb-32">
+                <div className="flex flex-col justify-center items-center space-y-6 pb-32" data-aos='zoom-in-up'>
                     {questions.map((question, index) => (
                     <QuestionCard
                         key={index}

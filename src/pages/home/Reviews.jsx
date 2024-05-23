@@ -12,7 +12,7 @@ const Reviews = () => {
 
             <div className="flex flex-col items-center gap-8 relative">
                 <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
-                    w-2/3 md:w-2/4 lg:w-[80%] pt-2 lg:pt-4' >
+                    w-2/3 md:w-2/4 lg:w-[80%] pt-2 lg:pt-4' data-aos='fade-up'>
                     What   
                     <span className='app-title' style={{ margin: ' 0 1rem' }}>
                         Our Patients
@@ -21,7 +21,7 @@ const Reviews = () => {
                 </h2>
 
                 <p className='text-lg md:text-xl 2xl:text-[1.4rem] text-navyBlue font-[500] mt-1 w-3/4 
-                    2xl:w-3/5'>
+                    2xl:w-3/5' data-aos='fade-up'>
                     Radiant Dental Studio always appreciates feedback from our valued patients.
                     To date, we're thrilled to have collected over 100 reviews with an average rating of 5 out of 5 stars.
                     Please read what others are saying about us below, and as always, we would love to
@@ -32,7 +32,7 @@ const Reviews = () => {
             </div>
 
             {/* Cards Render Dynamically acording to Responsive Size */}
-            <div className="flex justify-center items-center space-x-4 mt-6" >
+            <div className="flex justify-center items-center space-x-4 mt-6" data-aos='zoom-in-up'>
                 <ReviewsCarousel
                 reviews={reviews}
                 autoSlide={true}

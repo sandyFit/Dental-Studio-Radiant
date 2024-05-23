@@ -3,6 +3,7 @@ import ImagesGrid from '../../components/cards/ImagesGrid'
 import { useNavigate } from 'react-router-dom';
 import { HiStar } from 'react-icons/hi';
 import MotionText from '../../components/ui/MotionText';
+import BookOnlineBtn from '../../components/ui/BookOnlineBtn';
 
 const Hero = () => {
     const navigate = useNavigate();
@@ -48,45 +49,9 @@ const Hero = () => {
     
                     <div className="flex flex-col md:flex-row gap-10">
 
-                        <button class="group relative h-16 overflow-hidden rounded-[8px] btn-filled text-[1.4rem] 
-                        font-[600] uppercase px-16">
-                            <span class="relative inline-flex">
-                                <span class="duration-700 [transition-delay:0.02s] group-hover:[transform:rotateX(360deg)]">
-                                    B
-                                </span>
-                                <span class="duration-700 [transition-delay:0.04s] group-hover:[transform:rotateX(360deg)]">
-                                    o
-                                </span>
-                                <span class="duration-700 [transition-delay:0.06s] group-hover:[transform:rotateX(360deg)]">
-                                    o
-                                </span>
-                                <span class="duration-700 [transition-delay:0.08s] group-hover:[transform:rotateX(360deg)]">
-                                    k
-                                </span>
-                                <span class="duration-700 [transition-delay:0.10s] group-hover:[transform:rotateX(360deg)]">
-                                    &nbsp;
-                                </span>
-                                <span class="duration-700 [transition-delay:0.12s] group-hover:[transform:rotateX(360deg)]">
-                                    O
-                                </span>
-                                <span class="duration-700 [transition-delay:0.14s] group-hover:[transform:rotateX(360deg)]">
-                                    n
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] group-hover:[transform:rotateX(360deg)]">
-                                    l
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] group-hover:[transform:rotateX(360deg)]">
-                                    i
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] group-hover:[transform:rotateX(360deg)]">
-                                    n
-                                </span>
-                                <span class="duration-700 [transition-delay:0.16s] group-hover:[transform:rotateX(360deg)]">
-                                    e
-                                </span>
-                            </span>
-                        </button>
-
+                        <div className="flex btn-book-online h-16 px-16">
+                            <BookOnlineBtn/>
+                        </div>
 
                         <div className="flex items-center gap-2">
                             <div className="flex">

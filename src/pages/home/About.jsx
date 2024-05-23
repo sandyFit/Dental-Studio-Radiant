@@ -65,16 +65,17 @@ const About = () => {
                 <article className='flex flex-col justify-center items-center relative'>
 
                     <button onClick={toggleMenu}
-                        className={`fixed p-5 top-8 right-[110rem] group inline-flex items-center 
-                            justify-center overflow-hidden rounded-full bg-white3 bg-opacity-30 
-                            z-50 ${showFloatingBtn ? '' : 'invisible'} `}>
-                        <div className={`transition duration-300 text-spaceCadet ${isMenuOpen ? 'rotate-icon' : ''}`}>
-                            {isMenuOpen ? <AiOutlineClose  style={{fontSize: '3rem'}} /> : <AiOutlineMenu style={{fontSize: '3rem'}} />}
+                        className={`fixed p-5 top-8 left-12 group inline-flex items-center 
+                            justify-center overflow-hidden rounded-full bg-zinc-50 bg-opacity-45 border-2 
+                            border-zinc-50 z-50 ${showFloatingBtn ? '' : 'invisible'} `}>
+                        <div className={`transition duration-300 text-navyBlue ${isMenuOpen ? 'rotate-icon' : ''}`}>
+                            {isMenuOpen ? <AiOutlineClose  style={{fontSize: '2.2rem'}} /> : <AiOutlineMenu style={{fontSize: '2.2rem'}} />}
                         </div>
                     </button>
 
+                    {/* <button className='bg-zinc-50'>+</button> */}
                 
-                    <div className={`z-30 ${showFloatingBtn ? '' : 'invisible'}`}>                       
+                    <div className={`z-30 fixed top-6 left-9 ${showFloatingBtn ? '' : 'invisible'}`}>                       
                         {isMenuOpen && (
                             <MenuCurtain isMenuOpen={isMenuOpen}
                                 
@@ -85,11 +86,11 @@ const About = () => {
                         
 
                     <button onClick={scrollToTop}
-                        className={`fixed p-5 left-96 2xl:left-[110rem] 2xl:top-[48rem] group inline-flex  items-center 
-                            justify-center overflow-hidden rounded-full bg-navyBlue bg-opacity-30 z-50
+                        className={`fixed p-5 right-12 bottom-20 group inline-flex  items-center 
+                            justify-center overflow-hidden rounded-full bg-zinc-50 bg-opacity-45 border-2 border-zinc-50 z-50
                             ${showFloatingBtn ? '' : 'invisible'}`}>
-                        <div className="transition duration-300 group-hover:rotate-[360deg] text-spaceCadet">
-                            <HiArrowUp style={{fontSize: '3rem'}}/>
+                        <div className="transition duration-300 group-hover:rotate-[360deg] text-navyBlue">
+                            <HiArrowUp style={{fontSize: '2.2rem'}}/>
                         </div>
                     </button>
 

@@ -87,7 +87,7 @@ const Home = () => {
             <section id='t1' className='section -z-10'>
                 <TransitionAbout/>
             </section>
-            <section id='about' className='z-20'>
+            <section id='about' className=''>
                 <About/>
             </section>
             <section id='services'>
