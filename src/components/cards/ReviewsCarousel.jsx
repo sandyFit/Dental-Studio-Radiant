@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import ReviewsCard from './ReviewsCard';
-import { ChevronLeftRounded, ChevronRightRounded } from '@mui/icons-material';
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
+
 
 const ReviewsCarousel = ({ reviews }) => {
 
@@ -84,18 +85,20 @@ const ReviewsCarousel = ({ reviews }) => {
 
 
     return (
-        <div className='flex flex-col items-center justify-center'>
-            <div className='relative overflow-x-hidden w-auto'>
-                <div className='flex justify-center gap-6'>
-                    {renderCards()}
-                </div>
-            </div>
-            <div className="flex justify-center gap-8 mt-8">
-                <button className='p-3 bg-custom-gradient-bg-cards text-white3' onClick={goPrev}>
-                    <ChevronLeftRounded style={{ fontSize: '2rem' }} />
+        <div className='flex flex-col items-center justify-center px-16'>
+            
+            <div className="flex justify-center">
+                <button className='text-azure text-5xl' onClick={goPrev}>
+                    <HiChevronLeft />
                 </button>
-                <button className='p-3 bg-custom-gradient-bg-cards text-white3' onClick={goNext}>
-                    <ChevronRightRounded style={{ fontSize: '2rem' }} />
+                
+                <div className='relative overflow-x-hidden w-auto'>
+                    <div className='flex justify-center gap-6'>
+                        {renderCards()}
+                    </div>
+                </div>
+                <button className='text-azure text-5xl' onClick={goNext}>
+                    <HiChevronRight />
                 </button>
             </div>
         </div>

@@ -168,8 +168,27 @@
         @apply text-xl font-[600]  text-zinc-950
     }
 
+    .text-xsmall-dark {
+        @apply text-lg font-[600]  text-zinc-950
+    }
+    .text-xxsmall-dark {
+        @apply  font-[600]  text-zinc-500
+    }
+
     .big-title {
+        @apply text-[8rem] font-[800] text-navyBlue leading-[150px]
+    }
+
+    .bigger-title {
         @apply text-[11rem] font-[800] text-navyBlue leading-[150px]
+    }
+
+    .work__photo-item {
+        @apply absolute w-full h-full cursor-pointer rounded-[20px] overflow-hidden
+    }
+
+    .work__photo-item img {
+        @apply block w-full h-full object-cover
     }
 
 

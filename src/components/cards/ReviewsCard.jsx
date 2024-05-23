@@ -1,10 +1,10 @@
 import React from 'react';
-import StarIcon from '@mui/icons-material/Star';
 import { renderDescription } from '../../utils/functions';
+import { HiStar } from 'react-icons/hi';
 
 const ReviewsCard = ({name, srcImg, review}) => {
     return (
-        <article className='w-[70%] lg:w-[33%] 2xl:w-[25%] gradient-border rounded-3xl p-12 mt-12 relative'>           
+        <article className='w-[70%] lg:w-[33%] 2xl:w-[30%] bg-navyBlue rounded-3xl p-12 mt-12 relative'>           
             <div className="flex justify-start items-center space-x-4">
                 <div >
                     <img src={srcImg}
@@ -14,13 +14,13 @@ const ReviewsCard = ({name, srcImg, review}) => {
                 </div>
 
                 <div className="flex flex-col">
-                    <h4 className='app-title text-3xl font-bold '>
+                    <h4 className='app-title text-xl font-bold '>
                         {name}
                     </h4>
-                    <div className='space-x-2'>
-                        <span className='font-bold text-yellow-400'>
+                    <div className='flex space-x-2'>
+                        <span className='flex font-bold text-yellow-400'>
                             {[...Array(5)].map((_, index) => (
-                                <StarIcon key={index} style={{fontSize: '1.5rem'} } />
+                                <HiStar key={index} style={{fontSize: '.8rem'} } />
                             ))}
                         </span>
                     </div>
@@ -31,7 +31,7 @@ const ReviewsCard = ({name, srcImg, review}) => {
             </div>
 
 
-            <p className='text-white3 text-xl font-light pt-6'>
+            <p className='text-zinc-50 font-[100] pt-6'>
                 {renderDescription(review)}
             </p>       
         </article>

@@ -33,19 +33,22 @@ const Services = () => {
             </span>
             <div className="flex flex-col items-center gap-8 relative">
                 <h2 className='text-center text-white3 text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
-                    w-2/3 md:w-2/4 lg:w-3/5 pt-2 lg:pt-4' data-aos="fade-up">
-                    Discover Our Exceptional  
-                    <span className='app-title' style={{ margin: ' 0 1rem' }}>
-                        Dental Services
+                    w-2/3 md:w-2/4 lg:w-3/5 pt-2 tracking-wider' data-aos="fade-up">                   
+                        Service and Safety is Our  
+                    <span className='app-title ml-4' >
+                        Top Priority
                     </span>         
                 </h2>
 
-                <p className='text-lg md:text-xl 2xl:text-2xl text-white3 font-light mt-8 w-3/4 
-                    2xl:w-3/5'
+                <p className='text-lg md:text-xl 2xl:text-[1.4rem text-white3 font-light mt-2 w-3/4 
+                    2xl:w-[70%]'
                     data-aos="fade-up"
                 >
-                    We provide a wide range of treatments, including cosmetic dentistry. Our commitment is rooted in
-                    assisting patients in preserving lifelong healthy teeth. Trust us for diverse services aimed at
+                    Our comprehensive dental services
+                    provide the treatments you need to look and feel your best!
+                    We’re dedicated to ensuring all our patients receive dental care that never compromises on quality.
+                    <br/>
+                    Trust us for a wide range of treatments aimed at
                     enhancing both the aesthetics and longevity of your smile.
                 </p>
                   

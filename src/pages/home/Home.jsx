@@ -6,7 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from 'lenis';
 import TransitionAbout from '../transitions/TransitionAbout';
 import Services from './Services';
-import TransitionTeam from '../transitions/TransitionTeam';
+import Team from './Team';
+import Reviews from './Reviews';
 
 const Home = () => {
 
@@ -79,20 +80,23 @@ const Home = () => {
 
     return (
         <div>
-            <section id='index'>
+            <section id='index' className='section -z-10'>
                 <Hero/>
             </section>
-            <section id='t1' className='section -z-10'>
+            {/* <section id='t1' className='section -z-10'>
                 <TransitionAbout/>
-            </section>
+            </section> */}
             <section id='about' className=''>
                 <About/>
             </section>
             <section id='services'>
                 <Services/>
             </section>
-            <section id='t2' className='section'>
-                <TransitionTeam/>
+            <section id='team' className=''>
+                <Team/>
+            </section>
+            <section id='reviews' className=''>
+                <Reviews/>
             </section>
         </div>
     )

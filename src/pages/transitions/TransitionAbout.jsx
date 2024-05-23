@@ -8,10 +8,10 @@ const TransitionAbout = () => {
         <section id='t1'
             className='flex flex-col pt-[8rem] pb-[12rem] -z-10' >
             <MotionText 
-                
+                icon={'⁕'}
                 part1={'Welcome to'}
-                part2={'Radiant Dental'}
-                part3={'Studio'}
+                part2={'Radiant'}
+                part3={' Dental Studio'}
             />
             
                         
