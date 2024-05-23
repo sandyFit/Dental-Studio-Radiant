@@ -4,7 +4,12 @@ import ReviewsCarousel from '../../components/cards/ReviewsCarousel';
 
 const Reviews = () => {
     return (
-        <section className='flex flex-col justify-center pt-12 relative'>
+        <section className='flex flex-col justify-center pt-6 relative'>
+
+            <span className='text-xxsmall-dark uppercase ml-16 mb-0'>
+                [04] Reviews 
+            </span>
+
             <div className="flex flex-col items-center gap-8 relative">
                 <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
                     w-2/3 md:w-2/4 lg:w-[80%] pt-2 lg:pt-4' >

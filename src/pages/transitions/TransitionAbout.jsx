@@ -6,7 +6,7 @@ const TransitionAbout = () => {
 
     return (
         <section id='t1'
-            className='flex flex-col pt-[8rem] pb-[12rem] -z-10' >
+            className='flex flex-col pt-[5rem] pb-[8rem] -z-10' >
             <MotionText 
                 icon={'⁕'}
                 part1={'Welcome to'}

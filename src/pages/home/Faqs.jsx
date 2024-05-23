@@ -12,33 +12,38 @@ const Faqs = () => {
     }
 
     return (
-        <section className='relative flex flex-col justify-center items-center h-auto pt-40 '>            
-            <h2 className='app-title text-8xl font-[600] text-center mb-3'>
-                Got Questions?
-            </h2>
-            <div>
-                <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
-                     pt-6 pb-10' >
-                        We Have
-                    <span className='app-title' style={{ margin: ' 0 1rem' }}>
-                        Answers
-                    </span>                      
-                </h2>     
-            </div> 
+        <section className='relative h-auto pt-40'>   
 
-            <div className="flex flex-col justify-center items-center space-y-6 pb-64">
-                {questions.map((question, index) => (
-                <QuestionCard
-                    key={index}
-                    question={question.question}
-                    answer={question.answer}
-                    isOpen={index === openQuestionIndex}
-                    onToggle={() => handleToggleAccordion(index)}
-                />
-                ))}
+            <span className='text-xxsmall-dark uppercase ml-16 mb-0'>
+                [05] Faqs 
+            </span>
+            
+            <div className="flex flex-col justify-center items-center">
+
+                <h2 className='app-title text-8xl font-[600] text-center mb-3'>
+                    Got Questions?
+                </h2>
+                <div>
+                    <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
+                        pt-6 pb-10' >
+                        We Have Answers                                          
+                    </h2>     
+                </div> 
+
+                <div className="flex flex-col justify-center items-center space-y-6 pb-32">
+                    {questions.map((question, index) => (
+                    <QuestionCard
+                        key={index}
+                        question={question.question}
+                        answer={question.answer}
+                        isOpen={index === openQuestionIndex}
+                        onToggle={() => handleToggleAccordion(index)}
+                    />
+                    ))}
+                </div>
             </div>
 
-            <hr className='w-full h-1 bg-custom-gradient-btn border-none'/>
+            
         </section>
     )
 }

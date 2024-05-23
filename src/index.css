@@ -154,6 +154,11 @@
             
     }
 
+    .transparent-btn {
+        @apply button text-azure bg-transparent  
+            border-azure shadow-xl shadow-midnight
+    }
+
     .text-xxsmall-white {
         @apply  font-[600] uppercase text-slate-500
     }

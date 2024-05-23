@@ -81,13 +81,13 @@ const Home = () => {
 
     return (
         <div>
-            <section id='index' className='section -z-10'>
+            <section id='index' className='z-0'>
                 <Hero/>
             </section>
-            {/* <section id='t1' className='section -z-10'>
+            <section id='t1' className='section -z-10'>
                 <TransitionAbout/>
-            </section> */}
-            <section id='about' className=''>
+            </section>
+            <section id='about' className='z-20'>
                 <About/>
             </section>
             <section id='services'>

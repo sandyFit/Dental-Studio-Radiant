@@ -3,6 +3,7 @@ import Navbar from './layouts/Navbar';
 import Home from './pages/home/Home';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import the CSS styles
+import Footer from './layouts/Footer';
 
 const App = () => {
 
@@ -15,7 +16,8 @@ const App = () => {
     return (
         <div>
             <Navbar />
-            <Home/>
+            <Home />
+            <Footer/>
         </div>
     )
 }

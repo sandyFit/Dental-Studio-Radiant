@@ -2,9 +2,9 @@ import React from 'react'
 
 const WorkingHrsTable = () => {
   return (
-    <article>      
-      <table className='text-spanishBlue text-md md:text-lg font-medium'
-        style={{ borderCollapse: 'separate', borderSpacing: '0 1rem' }}>
+    <article className='flex flex-col justify-center items-center'>      
+      <table className='text-zinc-300 text-md font-[200] flex  justify-center'
+        style={{ borderCollapse: 'separate', borderSpacing: '0 .6rem' }}>
         <tbody>
           <tr>
             <td>Monday</td>
@@ -15,7 +15,7 @@ const WorkingHrsTable = () => {
             <td>09:00 am – 18:00 pm</td>
           </tr>
           <tr>
-            <td>Wednesday</td>
+            <td>Wednesday &nbsp;</td>
             <td>09:00 am – 18:00 pm</td>
           </tr>
           <tr>
@@ -37,7 +37,7 @@ const WorkingHrsTable = () => {
         book online
       </button> */}
 
-      <button class="group relative overflow-hidden overflow-x-hidden btn-filled px-16 py-3 mt-4">
+      <button class="group relative overflow-hidden overflow-x-hidden btn-filled px-16 py-3 mt-16">
         <span class="relative z-10">book online</span>
         <span class="absolute inset-0 overflow-hidden rounded-md">
           <span class="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-blue-500

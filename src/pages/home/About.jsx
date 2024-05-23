@@ -94,7 +94,7 @@ const About = () => {
                     </button>
 
                     <h2 className='text-left text-zinc-50  text-3xl md:text-4xl xl:text-5xl font-bold
-                        w-[80%]'>
+                        w-[89%]'>
                         Expert 
                         <span className='app-title ' style={{ margin: ' 0 1rem' }}>
                             Care,<br/>
@@ -107,7 +107,7 @@ const About = () => {
                         </span>         
                     </h2>
 
-                    <p className='text-lg md:text-xl 2xl:text-[1.45rem] text-zinc-50 font-[100] mt-8 w-[80%] pr-12'>
+                    <p className='text-lg md:text-xl text-zinc-50 font-[100] mt-8 w-[89%] pr-24'>
                         We are a passionate team of dental clinicians committed to providing care for patients of all ages —
                         from the young to the young at heart.
                         <br/><br/>

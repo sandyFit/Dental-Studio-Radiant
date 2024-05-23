@@ -23,12 +23,13 @@ const NewsletterInput = () => {
     };
 
     return (
-        <div className='flex flex-col items-center w-[18rem]'>
-            <form onSubmit={handleSubmit} noValidate className="w-full flex flex-col items-center"> {/* Ensure the form tag wraps the input and button */}
+        <div className='flex flex-col items-center w-[16rem] gap-6'>
+            <form onSubmit={handleSubmit} noValidate className="w-full flex flex-col"> 
+                {/* <label htmlFor="text" className="text-xxsmall-white pb-3">Enter your email</label> */}
                 <input
                     type="email"
                     id="email"
-                    className="bg-niceBlue border-4 border-spanishBlue 
+                    className="bg-niceBlue border-4 border-blue-400 
                             text-azure text-lg rounded-lg focus:outline-none
                             focus:ring-2 focus:ring-azure focus:border-azure
                             block w-full p-2.5"
@@ -37,7 +38,7 @@ const NewsletterInput = () => {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
-                <div className="py-6">
+                <div className="mt-6">
                     <button type="submit"
                         className='transparent-btn w-[10rem] py-2 hover:text-white hover:bg-azure'
                     >
@@ -45,7 +46,7 @@ const NewsletterInput = () => {
                     </button>
                 </div>
             </form>
-            <p className='text-spanishBlue font-thin text-lg'>
+            <p className='text-zinc-300 font-thin '>
                 Occasionally we send newsletters containing practice news. If you'd like to receive this
                 information, sign up to our email above. We take your privacy seriously and ensure that your
                 information will not be passed on to anyone.

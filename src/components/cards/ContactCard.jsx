@@ -1,9 +1,7 @@
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedinIcon from '@mui/icons-material/Linkedin';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { BsEnvelopeAtFill,  BsTwitterX } from 'react-icons/bs';
+import { AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
+import { ImLocation2 } from 'react-icons/im';
+import { FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 
 const ContactCard = () => {
   return (
@@ -18,7 +16,7 @@ const ContactCard = () => {
           Call today or request an appointment online.
         </h5>
             <div className='flex m-4'> 
-              <LocationOnIcon/>
+              <ImLocation2/>
               <p className='w-48 ml-2 text-xl font-medium'>
                 Radiant Dental Studio
                 123 Main Street
@@ -27,14 +25,14 @@ const ContactCard = () => {
             </div>
 
             <div className='flex m-4'>
-              <PhoneIcon />
+              <FaPhoneAlt />
               <p className='ml-2 text-xl font-medium'>
                 991 318 66 99
               </p>
             </div>
 
             <div className='flex m-4'>
-              <EmailIcon />
+              <BsEnvelopeAtFill />
               <p className='ml-2 text-xl font-medium'>
                 info@radiantdental.com 
               </p>
@@ -42,18 +40,18 @@ const ContactCard = () => {
           </div>
 
           <div className='flex justify-between space-x-16 pt-6'>
-            <InstagramIcon 
+            <FaInstagram 
                 style={{ fontSize: '3rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
                 onMouseOver={(e) => e.target.style.opacity = 0.75}
                 onMouseOut={(e) => e.target.style.opacity = 1}
             />
-            <LinkedinIcon 
+            <AiFillLinkedin
                 style={{ fontSize: '3rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
                 onMouseOver={(e) => e.target.style.opacity = 0.75}
                 onMouseOut={(e) => e.target.style.opacity = 1}
             />
-            <TwitterIcon 
-                style={{ fontSize: '3rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
+            <BsTwitterX 
+                style={{ fontSize: '2.5rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
                 onMouseOver={(e) => e.target.style.opacity = 0.75}
                 onMouseOut={(e) => e.target.style.opacity = 1}
             />
