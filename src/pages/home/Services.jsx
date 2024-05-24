@@ -27,7 +27,7 @@ const Services = () => {
     }
         
     return (
-        <section className='w-full pb-2 xl:pb-40 pt-1 xl:pt-20 bg-navyBlue rounded-b-[30px]'>
+        <section className='w-full pb-2 xl:pb-40 pt-6 bg-navyBlue rounded-b-[30px]'>
             <span className='text-xxsmall-white ml-12'>
                 [02] Services 
             </span>

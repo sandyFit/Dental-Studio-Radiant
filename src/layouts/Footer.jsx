@@ -23,14 +23,14 @@ const Footer = () => {
                     <div className="flex flex-col w-full pr-16">
                         <div className="flex justify-evenly items-center w-full">
                             <div className='w-1/2 flex flex-col justify-center items-center mt-[5rem]'>
-                                <h4 className='text-white3 text-center text-2xl font-semibold mb-3'>
+                                <h4 className='text-white3 text-center text-2xl font-[600] mb-3'>
                                 WORKING HOURS
                                 </h4>
                                 <WorkingHrsTable />                                     
                             </div>
 
                             <div className='w-1/2 flex flex-col items-center mt-[5rem]'>
-                                <h4 className='text-white3 text-center text-2xl font-semibold mb-8'>
+                                <h4 className='text-white3 text-center text-2xl font-[600] mb-8'>
                                 NEWSLETTER SIGN UP
                                 </h4>
                                 <NewsletterInput/>

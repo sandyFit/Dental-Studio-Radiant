@@ -3,12 +3,13 @@ import QuestionCard from '../../components/cards/QuestionCard';
 import questions from '../../data/questions';
 
 const Faqs = () => {
-
+   
     const [openQuestionIndex, setOpenQuestionIndex] = useState(null);
 
     const handleToggleAccordion = index => {
         setOpenQuestionIndex(openQuestionIndex === index ? null : index);
     }
+
 
     return (
         <section className='relative h-auto pt-40'>   
@@ -29,7 +30,9 @@ const Faqs = () => {
                     </h2>     
                 </div> 
 
-                <div className="flex flex-col justify-center items-center space-y-6 pb-32" data-aos='zoom-in-up'>
+                <div className="flex flex-col justify-center items-center space-y-6 pb-32"
+                    data-aos='zoom-in-up'
+                >
                     {questions.map((question, index) => (
                     <QuestionCard
                         key={index}

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useEffect, useRef, useLayoutEffect} from 'react'
 import ImagesGrid from '../../components/cards/ImagesGrid'
 import { useNavigate } from 'react-router-dom';
 import { HiStar } from 'react-icons/hi';
-import MotionText from '../../components/ui/MotionText';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Lenis from 'lenis';
 import BookOnlineBtn from '../../components/ui/BookOnlineBtn';
 
 const Hero = () => {
@@ -12,6 +14,47 @@ const Hero = () => {
         navigate('book');
     }
 
+    const lenisRef = useRef(null);
+
+    useEffect(() => {
+        //LENIS SMOOTH SCROLL
+        const lenis = new Lenis({
+            duration: 2
+        })
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf);
+
+        // Integration lenis on GSAP ScrollTrigger
+        lenis.on('scroll', ScrollTrigger.update);
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 1000)
+        })
+    }, []);
+
+
+   const imgRef = useRef(null);
+
+    useLayoutEffect(() => {
+        const img = imgRef.current;
+
+        // Initially hide the image and apply the clip path
+        gsap.set(img, { opacity: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" });
+
+        // Animate the image to fade in and reveal with clip path
+        gsap.to(img, {
+        opacity: 1,
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 3,
+        ease: "power2.out",
+        });
+
+    }, []);
+    
     return (
         <section id='index'
             className='flex flex-col w-full min-h-screen '>
@@ -74,8 +117,10 @@ const Hero = () => {
                     </div>
                 </article>
 
-                <article className='hidden lg:grid w-[90%] place-self-center pr-24'>
-                    <ImagesGrid/>
+                <article ref={imgRef} className='hidden lg:grid w-[90%] place-self-center pr-24'>
+                    {/* <ImagesGrid/> */}
+                    <img src="/people/black-girl.jpg" alt="Beautiful smile afroamerican girl" className='rounded-[20px]
+                    border-3 border-zinc-50' />
                 </article>
             </div>
 

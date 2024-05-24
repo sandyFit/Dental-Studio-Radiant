@@ -1,4 +1,5 @@
 import React from 'react'
+import BookOnlineBtn from '../ui/BookOnlineBtn';
 
 const WorkingHrsTable = () => {
   return (
@@ -37,13 +38,9 @@ const WorkingHrsTable = () => {
         book online
       </button> */}
 
-      <button class="group relative overflow-hidden overflow-x-hidden btn-filled px-16 py-3 mt-16">
-        <span class="relative z-10">book online</span>
-        <span class="absolute inset-0 overflow-hidden rounded-md">
-          <span class="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-blue-500
-            transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150"></span>
-        </span>
-      </button>
+      <div className="flex btn-book-online mt-16 px-12 py-2">
+        <BookOnlineBtn/>
+      </div>
     </article>
   );
 };
