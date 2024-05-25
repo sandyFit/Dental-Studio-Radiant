@@ -81,7 +81,7 @@ const Home = () => {
 
     return (
         <div>
-            <section id='index' className='z-0'>
+            <section id='index' className='-z-10'>
                 <Hero/>
             </section>
             <section id='t1' className='section -z-10'>

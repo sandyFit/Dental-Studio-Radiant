@@ -1,5 +1,6 @@
 import React from 'react'
 import BookOnlineBtn from '../ui/BookOnlineBtn';
+import Button from '../cards/Button';
 
 const WorkingHrsTable = () => {
   return (
@@ -38,8 +39,8 @@ const WorkingHrsTable = () => {
         book online
       </button> */}
 
-      <div className="flex btn-book-online mt-16 px-12 py-2">
-        <BookOnlineBtn/>
+      <div className="flex btn-book-online mt-16 px-12 py-2 text-[1.4rem]">
+        <Button text={'book online'}/>
       </div>
     </article>
   );

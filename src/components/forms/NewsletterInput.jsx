@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { showAlert } from "../../utils/functions";
+import Button from "../cards/Button";
 
 const NewsletterInput = () => {
     const [email, setEmail] = useState('');
@@ -38,12 +39,8 @@ const NewsletterInput = () => {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
-                <div className="mt-6">
-                    <button type="submit"
-                        className='transparent-btn w-[10rem] py-2 hover:text-white hover:bg-azure'
-                    >
-                        Submit
-                    </button>
+                <div className="mt-6 transparent-btn w-[10rem] py-2 hover:text-zinc-50">
+                    <Button text={'submit'}/>
                 </div>
             </form>
             <p className='text-zinc-300 font-thin '>

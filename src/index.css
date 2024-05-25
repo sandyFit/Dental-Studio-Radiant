@@ -137,8 +137,9 @@
 }
 
 @layer utilities {
+    /* =========== MENU BTN =========== */
     .line {
-        @apply w-[3.5rem] h-[.1rem] bg-[#000]
+        @apply w-[3.5rem] h-[.1rem] bg-[#000] transition-all duration-300
     }
 
     .line-1, .line-3 {
@@ -149,6 +150,37 @@
         width: 3.5rem;
     }
 
+    .line-1.active {
+        @apply transform rotate-[-405deg] -translate-x-[5px] translate-y-[6px] w-[2.5rem];
+    }
+
+    .line-2.active {
+        @apply opacity-0;
+    }
+
+    .line-3.active {
+        @apply transform rotate-[405deg] -translate-x-[5px] -translate-y-[6px] w-[2.5rem];
+    }
+
+    /* =========== FLOATING BTN =========== */
+
+    .lines {
+        @apply w-[2.2rem] h-[.1rem] bg-[#000] transition-all duration-300;
+    }
+
+    .sup-line.active {
+        @apply transform rotate-[-405deg]  translate-y-[9px] ;
+    }
+
+    .medium-line.active {
+        @apply opacity-0;
+    }
+
+    .inf-line.active {
+        @apply transform rotate-[405deg] -translate-y-[9px] ;
+    }
+
+    /*========= BUTTONS =========*/
     .btn-book-online {
         @apply button text-zinc-50 bg-custom-gradient-btn  border-zinc-50
             
@@ -174,7 +206,7 @@
     }
 
     .text-small-dark {
-        @apply text-xl font-[600]  text-zinc-950
+        @apply text-xl font-[600] uppercase text-zinc-950
     }
 
     .text-xsmall-dark {
@@ -206,6 +238,5 @@
     .font-outline-4 {
         -webkit-text-stroke: 4px white;
     }
-
 
 }

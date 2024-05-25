@@ -11,9 +11,9 @@ const ContactCard = () => {
             CONTACT US
           </h4>
 
-      <div className='flex flex-col items-center pt-8 px-16'>
-        <h5 className='text-spaceCadet text-center text-[1.1rem] uppercase font-[700]'>
-          Call us or book online
+      <div className='flex flex-col items-start pt-4 px-16'>
+        <h5 className='text-spaceCadet text-[1.1rem] uppercase font-[700] text-left'>
+          we welcome your inquiries by phone or email.
         </h5>
 
         <div className="flex flex-col justify-start">        
@@ -26,14 +26,14 @@ const ContactCard = () => {
               </p>
             </div>
 
-            <div className='flex gap-2 text-[1.3rem] mx-4 mt-6'>
+            <div className='flex gap-2 text-[1.3rem] mx-4 mt-6 '>
               <FaPhoneAlt />
               <p className='ml-2 text-[1.1rem] font-medium'>
                 991 318 66 99
               </p>
             </div>
 
-            <div className='flex gap-2 text-[1.4rem]  mx-4 mt-6'>
+            <div className='flex gap-2 text-[1.4rem] mb-11 mx-4 mt-6'>
               <BsEnvelopeAtFill />
               <p className='ml-2 text-[1.1rem] font-medium'>
                 info@radiantdental.com 
@@ -41,24 +41,27 @@ const ContactCard = () => {
             </div>
           </div>
       </div>
+
+      {/* <hr className='w-[46%] border-t-[1px] border-zinc-50 mt-8'/> */}
       
-      <h5 className='text-spaceCadet text-center text-[1.1rem] uppercase font-[700] pt-12'>
+      <h5 className='text-spaceCadet text-center text-[1.1rem] uppercase font-[700] '>
           Follow us everywhere
         </h5>
-
+        
+      
           <div className='flex justify-between space-x-16 '>
             <FaInstagram 
-                style={{ fontSize: '3rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
+                style={{ fontSize: '2rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
                 onMouseOver={(e) => e.target.style.opacity = 0.75}
                 onMouseOut={(e) => e.target.style.opacity = 1}
             />
             <AiFillLinkedin
-                style={{ fontSize: '3rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
+                style={{ fontSize: '2rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s' }}
                 onMouseOver={(e) => e.target.style.opacity = 0.75}
                 onMouseOut={(e) => e.target.style.opacity = 1}
             />
             <BsTwitterX 
-                style={{ fontSize: '2.4rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s', marginTop: '4px' }}
+                style={{ fontSize: '1.7rem', color: 'inherit', cursor: 'pointer', transition: 'opacity 0.3s', marginTop: '4px' }}
                 onMouseOver={(e) => e.target.style.opacity = 0.75}
                 onMouseOut={(e) => e.target.style.opacity = 1}
             />       

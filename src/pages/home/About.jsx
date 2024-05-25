@@ -1,9 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Element, animateScroll as scroll } from 'react-scroll';
 import MenuCurtain from '../../components/cards/MenuCurtain';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { HiArrowUp } from 'react-icons/hi2';
-import { TimelineMax } from 'gsap';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
@@ -41,11 +39,10 @@ const About = () => {
         // Adjust the scroll threshold based on your layout
         const scrollThreshold = 1140;
 
-        if (scrollPosition > scrollThreshold)
-        {
+        if (scrollPosition > scrollThreshold) {
             setShowFloatingBtn(true);
-        } else
-        {
+        }
+        else {
             setShowFloatingBtn(false);
         }
     };
@@ -68,6 +65,7 @@ const About = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +77,7 @@ const About = () => {
     gsap.from(img, {
       opacity: 0,
       y: -20, // Adjust the y value to move the image upwards
-      duration: 2,
+      duration: 3,
       ease: "power2.out",
     });
 
@@ -92,7 +90,7 @@ const About = () => {
           opacity: 1,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
           ease: "power2.out",
-          duration: 2,
+          duration: 3,
         });
       },
       once: false, // Repeat the animation every time it's scrolled
@@ -114,8 +112,8 @@ const About = () => {
                 <img src="/images/dots.png" alt="dots" className='hidden 2xl:block absolute w-72 left-16 bottom-10 opacity-25' />
                 <img src="/images/dots.png" alt="dots" className='hidden 2xl:block absolute w-72 left-[32rem] -top-32 rotate-90 opacity-25' />
 
+                {/* ABOUT IMAGE */}
                 <div className="w-full ml-12">
-
                     <article ref={imgRef} className='w-[35vw]  pb-24 ml-[1rem] lg:ml-36 2xl:ml-[10rem] rounded-[20px]
                         overflow-hidden'>                   
                         <img                       
@@ -126,29 +124,31 @@ const About = () => {
                     </article>
                 </div>
 
+                {/* FLOATING MENU BUTTON  */}
                 <article className='flex flex-col justify-center items-center relative'>
-
                     <button onClick={toggleMenu}
-                        className={`fixed p-5 top-8 left-12 group inline-flex items-center 
+                        className={`fixed w-20 h-20 top-8 left-12 group inline-flex items-center 
                             justify-center overflow-hidden rounded-full bg-zinc-50 bg-opacity-45 border-2 
                             border-zinc-50 z-50 ${showFloatingBtn ? '' : 'invisible'} `}>
-                        <div className={`transition duration-300 text-navyBlue ${isMenuOpen ? 'rotate-icon' : ''}`}>
-                            {isMenuOpen ? <AiOutlineClose  style={{fontSize: '2.2rem'}} /> : <AiOutlineMenu style={{fontSize: '2.2rem'}} />}
+                        <div className="group relative text-small-dark flex items-center gap-2">
+
+                            <div className="flex flex-col items-end cursor-pointer gap-[8px]">
+                                <div className={`lines sup-line ${isMenuOpen ? 'active' : ''}`}></div>
+                                <div className={`lines medium-line ${isMenuOpen ? 'active' : ''}`}></div>
+                                <div className={`lines inf-line ${isMenuOpen ? 'active' : ''}`}></div>
+                            </div>
                         </div>
                     </button>
-
-                    {/* <button className='bg-zinc-50'>+</button> */}
-                
+               
+                    {/* MENUHERO COMPONENT */}
                     <div className={`z-30 fixed top-4 left-8 ${showFloatingBtn ? '' : 'invisible'}`}>                       
                         {isMenuOpen && (
-                            <MenuCurtain isMenuOpen={isMenuOpen}
-                                
-                            />
-                        
+                            <MenuCurtain isMenuOpen={isMenuOpen}/>                       
                         )}
                     </div>
                         
 
+                    {/* FLOATING BUTTON TO GO TOP */}
                     <button onClick={scrollToTop}
                         className={`fixed p-5 right-12 bottom-20 group inline-flex  items-center 
                             justify-center overflow-hidden rounded-full bg-zinc-50 bg-opacity-45 border-2 border-zinc-50 z-50
@@ -158,6 +158,7 @@ const About = () => {
                         </div>
                     </button>
 
+                    {/* ABOUT COPY */}
                     <h2 className='text-left text-zinc-50  text-3xl md:text-4xl xl:text-5xl font-bold
                         w-[89%]'>
                         Expert 
