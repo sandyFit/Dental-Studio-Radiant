@@ -1,109 +1,122 @@
-import React, {useState, useEffect} from 'react'
-import Hero from './Hero'
-import About from './About';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
-import TransitionAbout from '../transitions/TransitionAbout';
+import Hero from './Hero';
+import About from './About';
 import Services from './Services';
 import Team from './Team';
 import Reviews from './Reviews';
 import Faqs from './Faqs';
 
 const Home = () => {
-
     useEffect(() => {
-        //LENIS SMOOTH SCROLL
+        // Initialize Lenis for smooth scrolling
         const lenis = new Lenis({
-            duration: 1.2
-        })
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Easing function for smoother scroll
+            smooth: true
+        });
+
         function raf(time) {
-            lenis.raf(time)
-            requestAnimationFrame(raf)
+            lenis.raf(time);
+            requestAnimationFrame(raf);
         }
 
         requestAnimationFrame(raf);
 
-        // Integration lenis on GSAP ScrollTrigger
+        // Integrate Lenis with GSAP ScrollTrigger
         lenis.on('scroll', ScrollTrigger.update);
 
         gsap.ticker.add((time) => {
-            lenis.raf(time * 1000)
-        })
-
-        gsap.ticker.lagSmoothing(0)
-
-    })
-
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const sections = gsap.utils.toArray(".section");
-        console.log("Sections found:", sections.length); // Check how many sections are detected
-
-        sections.forEach((section, i) => {
-            console.log("Animating section:", section.id); // Identify which section is being animated
-
-            // Ensure initial visibility for testing
-            gsap.set(section.children, { opacity: 1, y: 0 });
-
-            ScrollTrigger.create({
-                trigger: section,
-                start: "top top",
-                end: "bottom top",
-                pin: true,
-                pinSpacing: false,
-                onEnter: () => console.log("Entering:", section.id),
-                onLeave: () => console.log("Leaving:", section.id),
-            });
-
-            gsap.from(section.children, {
-                y: 50,
-                opacity: 0,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top bottom",
-                    end: "top top",
-                    toggleActions: "play none none none",
-                    onEnterBack: () => console.log("Entering back:", section.id),
-                    onLeaveBack: () => console.log("Leaving back:", section.id),
-                },
-            });
+            lenis.raf(time * 1000);
         });
 
+        gsap.ticker.lagSmoothing(0);
+
+        // Cleanup function
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
     }, []);
 
-    
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const sections = gsap.utils.toArray(".section");
+        const colors = ['#94a3b8', '#c4b5fd',  '#93c5fd', '#a5b4fc', '#7dd3fc']; // Colors for about, services, team, reviews, faqs
+
+        sections.forEach((section, index) => {
+            if (index === 0) return; // Skip the first section (Hero)
+            
+            console.log(`Section ${index}:`, section); // Debugging line
+
+            ScrollTrigger.create({
+                trigger: section,
+                start: "top center",
+                end: "bottom center",
+                onEnter: () => {
+                    gsap.to('.container', {
+                        backgroundColor: colors[index - 1], // Offset by one to align with sections
+                        duration: 1.5,
+                        ease: "power2.inOut",
+                    });
+                },
+                onEnterBack: () => {
+                    gsap.to('.container', {
+                        backgroundColor: colors[index - 1], // Offset by one to align with sections
+                        duration: 1.5,
+                        ease: "power2.inOut",
+                    });
+                },
+            });
+        });
+
+        // Create a ScrollTrigger for the Hero section to reset the background color
+        ScrollTrigger.create({
+            trigger: "#index",
+            start: "top top",
+            end: "bottom top",
+            onEnter: () => {
+                gsap.to('.container', {
+                    backgroundColor: '#cbd5e1',
+                    duration: 1.5,
+                    ease: "power2.inOut",
+                });
+            },
+            onEnterBack: () => {
+                gsap.to('.container', {
+                    backgroundColor: '#cbd5e1',
+                    duration: 1.5,
+                    ease: "power2.inOut",
+                });
+            },
+        });
+
+    }, []);
 
     return (
-        <div>
-            <section id='index' className='-z-10'>
-                <Hero/>
+        <div className="container" style={{ backgroundColor: '#cbd5e1' }}>
+            <section id="index" className="section">
+                <Hero />
             </section>
-            <section id='t1' className='section -z-10'>
-                <TransitionAbout/>
+            <section id="about" className="section">
+                <About />
             </section>
-            <section id='about' className=''>
-                <About/>
+            <section id="services" className="section">
+                <Services />
             </section>
-            <section id='services'>
-                <Services/>
+            <section id="team" className="section">
+                <Team />
             </section>
-            <section id='team' className=''>
-                <Team/>
+            <section id="reviews" className="section">
+                <Reviews />
             </section>
-            <section id='reviews' className=''>
-                <Reviews/>
-            </section>
-            <section id='faq' className=''>
-                <Faqs/>
+            <section id="faq" className="section">
+                <Faqs />
             </section>
         </div>
-    )
-}
+    );
+};
 
 export default Home;

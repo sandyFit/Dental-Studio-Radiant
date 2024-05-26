@@ -13,27 +13,27 @@ const Hero = () => {
         navigate('book');
     }
 
-    const lenisRef = useRef(null);
+    // const lenisRef = useRef(null);
 
-    useEffect(() => {
-        // LENIS SMOOTH SCROLL
-        const lenis = new Lenis({
-            duration: 2
-        });
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
+    // useEffect(() => {
+    //     // LENIS SMOOTH SCROLL
+    //     const lenis = new Lenis({
+    //         duration: 2
+    //     });
+    //     function raf(time) {
+    //         lenis.raf(time);
+    //         requestAnimationFrame(raf);
+    //     }
 
-        requestAnimationFrame(raf);
+    //     requestAnimationFrame(raf);
 
-        // Integration lenis on GSAP ScrollTrigger
-        lenis.on('scroll', ScrollTrigger.update);
+    //     // Integration lenis on GSAP ScrollTrigger
+    //     lenis.on('scroll', ScrollTrigger.update);
 
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000);
-        });
-    }, []);
+    //     gsap.ticker.add((time) => {
+    //         lenis.raf(time * 1000);
+    //     });
+    // }, []);
 
     const imgRef = useRef(null);
 
@@ -54,9 +54,9 @@ const Hero = () => {
     }, []);
     
     return (
-        <section id='index' className='flex flex-col w-full min-h-screen'>
+        <section id='index' className='flex flex-col w-full min-h-screen mb-[10vw]'>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 relative mt-12 z-[0]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 relative mt-40 z-[0]">
 
                 <div className="lg:hidden grid place-self-center w-8/12 p-4 bg-white shadow-lg shadow-slate-900 
                     transform rotate-2 mt-2 md:mt-4">

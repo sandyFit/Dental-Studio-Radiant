@@ -10,7 +10,7 @@ const ReviewsCarousel = ({ reviews }) => {
     const getVisibleCards = () => {
         const width = window.innerWidth;
         if (width < 1024) return 1;
-        if (width < 1536) return 2;
+        if (width < 1500) return 2;
         return 3;
     }
 
@@ -85,21 +85,27 @@ const ReviewsCarousel = ({ reviews }) => {
 
 
     return (
-        <div className='flex flex-col items-center justify-center px-16'>
+        <div className='flex flex-col items-center justify-center px-24'>
             
-            <div className="flex justify-center">
-                <button className='text-azure text-5xl' onClick={goPrev}>
-                    <HiChevronLeft />
-                </button>
-                
+            <div className=" justify-center relative">
+                <div className="flex absolute right-12 top-8 space-x-4 z-20">
+                    <button className='w-12 h-12 bg-navyBlue rounded-full text-zinc-50 text-3xl flex justify-center
+                        items-center' 
+                        onClick={goPrev}>
+                        <HiChevronLeft />
+                    </button>
+                    <button className='w-12 h-12 bg-navyBlue rounded-full text-zinc-50 text-3xl flex justify-center
+                        items-center' 
+                        onClick={goNext}>
+                        <HiChevronRight />
+                    </button>
+                </div>
                 <div className='relative overflow-x-hidden w-auto'>
-                    <div className='flex justify-center gap-6'>
+                    <div className='flex justify-center gap-6 my-12'>
                         {renderCards()}
                     </div>
                 </div>
-                <button className='text-azure text-5xl' onClick={goNext}>
-                    <HiChevronRight />
-                </button>
+                
             </div>
         </div>
     )

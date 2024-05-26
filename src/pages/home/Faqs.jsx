@@ -14,17 +14,17 @@ const Faqs = () => {
     return (
         <section className='relative h-auto pt-40'>   
 
-            <span className='text-xxsmall-dark uppercase ml-16 mb-0'>
+            <span className='flex justify-end text-xxsmall-dark uppercase mr-16 mb-0'>
                 [05] Faqs 
             </span>
             
             <div className="flex flex-col justify-center items-center">
 
-                <h2 className='app-title text-8xl font-[600] text-center mb-3'>
+                <h2 className='text-navyBlue text-8xl font-[600] text-center mb-3'>
                     Got Questions?
                 </h2>
                 <div>
-                    <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
+                    <h2 className='text-center app-title text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
                         pt-6 pb-10'data-aos='fade-up'>
                         We Have Answers                                          
                     </h2>     

@@ -13,7 +13,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='bg-cyan-50 w-[96%] bg-opacity-45 h-[86px] mt-8 mx-auto rounded-[10px] flex items-center
+        <nav className='bg-cyan-50 w-[96%] bg-opacity-45 h-[86px] absolute top-8 left-8 rounded-[10px] flex items-center
             border-2 border-zinc-50'>
             <article className="flex items-center justify-between mx-24 w-full h-full relative">
                 <Logo />

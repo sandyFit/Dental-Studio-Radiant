@@ -29,7 +29,7 @@ const ContactCard = () => {
             <div className='flex gap-2 text-[1.3rem] mx-4 mt-6 '>
               <FaPhoneAlt />
               <p className='ml-2 text-[1.1rem] font-medium'>
-                991 318 66 99
+                +1 991 318 66 99
               </p>
             </div>
 

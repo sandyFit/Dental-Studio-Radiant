@@ -37,7 +37,7 @@ const About = () => {
         const scrollPosition = window.scrollY;
 
         // Adjust the scroll threshold based on your layout
-        const scrollThreshold = 1140;
+        const scrollThreshold = 780;
 
         if (scrollPosition > scrollThreshold) {
             setShowFloatingBtn(true);
@@ -65,7 +65,7 @@ const About = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-    
+
     // Register the ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
@@ -100,17 +100,17 @@ const About = () => {
     
     return (
         <Element id='about'
-            className='flex flex-col pt-[3rem] bg-navyBlue rounded-t-[30px]' >
+            className='flex flex-col pt-[3rem] rounded-t-[50px] pb-[10vh]' >
 
-            <span className='text-xxsmall-white ml-12 mt-12'>
+            <span className='flex justify-end text-xxsmall-dark mr-16 mt-1'>
                 [01] About Us 
             </span>
 
-            <div className="w-full relative py-[3rem] flex flex-col xl:flex-row justify-center items-center mt-16
+            <div className="w-full relative py-[3rem] flex flex-col xl:flex-row justify-center items-center
                 gap-16 md:gap-24">
                 
-                <img src="/images/dots.png" alt="dots" className='hidden 2xl:block absolute w-72 left-16 bottom-10 opacity-25' />
-                <img src="/images/dots.png" alt="dots" className='hidden 2xl:block absolute w-72 left-[32rem] -top-32 rotate-90 opacity-25' />
+                {/* <img src="/images/dots.png" alt="dots" className='hidden 2xl:block absolute w-72 left-16 bottom-10 opacity-25' />
+                <img src="/images/dots.png" alt="dots" className='hidden 2xl:block absolute w-72 left-[32rem] -top-32 rotate-90 opacity-25' /> */}
 
                 {/* ABOUT IMAGE */}
                 <div className="w-full ml-12">
@@ -128,11 +128,11 @@ const About = () => {
                 <article className='flex flex-col justify-center items-center relative'>
                     <button onClick={toggleMenu}
                         className={`fixed w-20 h-20 top-8 left-12 group inline-flex items-center 
-                            justify-center overflow-hidden rounded-full bg-zinc-50 bg-opacity-45 border-2 
-                            border-zinc-50 z-50 ${showFloatingBtn ? '' : 'invisible'} `}>
-                        <div className="group relative text-small-dark flex items-center gap-2">
+                            justify-center overflow-hidden rounded-full bg-sky-50 bg-opacity-45 border-2 border-[#fff] 
+                            z-[1000] ${showFloatingBtn ? '' : 'invisible'} `}>
+                        <div className="group relative flex items-center gap-2">
 
-                            <div className="flex flex-col items-end cursor-pointer gap-[8px]">
+                            <div className="flex flex-col items-end cursor-pointer gap-[7px]">
                                 <div className={`lines sup-line ${isMenuOpen ? 'active' : ''}`}></div>
                                 <div className={`lines medium-line ${isMenuOpen ? 'active' : ''}`}></div>
                                 <div className={`lines inf-line ${isMenuOpen ? 'active' : ''}`}></div>
@@ -151,21 +151,21 @@ const About = () => {
                     {/* FLOATING BUTTON TO GO TOP */}
                     <button onClick={scrollToTop}
                         className={`fixed p-5 right-12 bottom-20 group inline-flex  items-center 
-                            justify-center overflow-hidden rounded-full bg-zinc-50 bg-opacity-45 border-2 border-zinc-50 z-50
-                            ${showFloatingBtn ? '' : 'invisible'}`}>
+                            justify-center overflow-hidden rounded-full bg-sky-50 bg-opacity-45 border-2 border-[#fff] 
+                            z-[1000] ${showFloatingBtn ? '' : 'invisible'}`}>
                         <div className="transition duration-300 group-hover:rotate-[360deg] text-navyBlue">
                             <HiArrowUp style={{fontSize: '2.2rem'}}/>
                         </div>
                     </button>
 
                     {/* ABOUT COPY */}
-                    <h2 className='text-left text-zinc-50  text-3xl md:text-4xl xl:text-5xl font-bold
+                    <h2 className='text-left text-navyBlue0  text-3xl md:text-4xl xl:text-5xl font-bold
                         w-[89%]'>
                         Expert 
                         <span className='app-title ' style={{ margin: ' 0 1rem' }}>
                             Care,<br/>
                         </span>         
-                        <span className='text-zinc-50 mr-4'>
+                        <span className='text-navyBlue mr-4'>
                             Exceptional 
                         </span>         
                         <span className='app-title' >
@@ -173,7 +173,7 @@ const About = () => {
                         </span>         
                     </h2>
 
-                    <p className='text-lg md:text-xl text-zinc-50 font-[100] mt-8 w-[86%] pr-24 pb-32'>
+                    <p className='text-lg md:text-xl text-zinc-950 font-[400] mt-8 w-[86%] pr-24 pb-32'>
                         We are a passionate team of dental clinicians committed to providing care for patients of all ages —
                         from the young to the young at heart.
                         <br/><br/>

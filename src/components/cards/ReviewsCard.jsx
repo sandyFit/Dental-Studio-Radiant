@@ -4,12 +4,13 @@ import { HiStar } from 'react-icons/hi';
 
 const ReviewsCard = ({name, srcImg, review}) => {
     return (
-        <article className='w-[70%] lg:w-[33%] 2xl:w-[30%] bg-navyBlue rounded-3xl p-12 mt-12 relative'>           
+        <article className='w-[70%] lg:w-[33%] 2xl:w-[30%] bg-blue-100 bg-opacity-45 border-[3px] border-zinc-50
+            rounded-3xl p-12 mt-12 relative'>           
             <div className="flex justify-start items-center space-x-4">
                 <div >
                     <img src={srcImg}
                         alt={`${name} avatar`}
-                        className='border-4 border-spanishBlue rounded-full'
+                        className='border-4 border-violet-400 rounded-full'
                     />
                 </div>
 
@@ -18,9 +19,9 @@ const ReviewsCard = ({name, srcImg, review}) => {
                         {name}
                     </h4>
                     <div className='flex space-x-2'>
-                        <span className='flex font-bold text-yellow-400'>
+                        <span className='flex font-bold text-azure'>
                             {[...Array(5)].map((_, index) => (
-                                <HiStar key={index} style={{fontSize: '.8rem'} } />
+                                <HiStar key={index} style={{fontSize: '1rem'} } />
                             ))}
                         </span>
                     </div>
@@ -31,7 +32,7 @@ const ReviewsCard = ({name, srcImg, review}) => {
             </div>
 
 
-            <p className='text-zinc-50 font-[100] pt-6'>
+            <p className='text-zinc-950 font-[400] pt-6'>
                 {renderDescription(review)}
             </p>       
         </article>
