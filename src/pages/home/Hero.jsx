@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HiStar } from 'react-icons/hi';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
 import Button from '../../components/cards/Button';
 
 const Hero = () => {
@@ -12,28 +10,6 @@ const Hero = () => {
     const handleClick = () => {
         navigate('book');
     }
-
-    // const lenisRef = useRef(null);
-
-    // useEffect(() => {
-    //     // LENIS SMOOTH SCROLL
-    //     const lenis = new Lenis({
-    //         duration: 2
-    //     });
-    //     function raf(time) {
-    //         lenis.raf(time);
-    //         requestAnimationFrame(raf);
-    //     }
-
-    //     requestAnimationFrame(raf);
-
-    //     // Integration lenis on GSAP ScrollTrigger
-    //     lenis.on('scroll', ScrollTrigger.update);
-
-    //     gsap.ticker.add((time) => {
-    //         lenis.raf(time * 1000);
-    //     });
-    // }, []);
 
     const imgRef = useRef(null);
 
@@ -58,11 +34,8 @@ const Hero = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 relative mt-40 z-[0]">
 
-                <div className="lg:hidden grid place-self-center w-8/12 p-4 bg-white shadow-lg shadow-slate-900 
-                    transform rotate-2 mt-2 md:mt-4">
-                    <div className="image-container">
-                        
-                        <div className={`curtain bg-zinc-300 opacity-95`}></div>
+                <div className="lg:hidden grid  w-8/12 p-4 mt-2 md:mt-4">
+                    <div className="w-[30vw] h-[30vh] bg-zinc-700">
                         <img src='/people/black-girl.jpg' alt='beautiful-black-girl-smiling' className="w-full relative z-[1]"/>
                     </div>
                     <div className="p-4"></div>

@@ -14,7 +14,7 @@ const Faqs = () => {
     return (
         <section className='relative h-auto pt-40'>   
 
-            <span className='flex justify-end text-xxsmall-dark uppercase mr-16 mb-0'>
+            <span className='flex justify-end text-xxsmall-dark uppercase mr-16 '>
                 [05] Faqs 
             </span>
             

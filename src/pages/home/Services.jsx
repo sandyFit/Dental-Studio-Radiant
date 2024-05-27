@@ -3,6 +3,8 @@ import servicesCardData from '../../data/servicesCardData';
 import services from '../../data/services'
 import ServicesCard from '../../components/cards/ServicesCard';
 import ModalServices from '../../components/cards/ModalServices';
+import ServicesBigCard from '../../components/cards/ServicesBigCard';
+import Accordion from '../../components/cards/Accordion';
 
 const Services = () => {
 
@@ -27,7 +29,7 @@ const Services = () => {
     }
         
     return (
-        <section className='w-full pb-2 xl:pb-40 pt-6 rounded-b-[30px]'>
+        <section className='w-full rounded-b-[30px]'>
             <span className='flex justify-end text-xxsmall-dark mr-16'>
                 [02] Services 
             </span>
@@ -54,7 +56,11 @@ const Services = () => {
                         enhancing both the aesthetics and longevity of your smile.
                     </p>
                     
-                    <article className="flex flex-wrap gap-20 w-full md:w-4/5 lg:w-4/5 mt-4 justify-center"
+                    <div className="flex mt-6" data-aos='zoom-in-up'>
+                        <ServicesBigCard/>
+                    </div>
+
+                    {/* <article className="flex flex-wrap gap-20 w-full md:w-4/5 lg:w-4/5 mt-4 justify-center"
                         data-aos='zoom-in-up'>
                         {servicesCardData.map((service, index) => (
                             <div key={index} className=''>                    
@@ -76,7 +82,7 @@ const Services = () => {
                                 service={selectedService}
                             />
                         )}
-                    </article>
+                    </article> */}
 
                 </div>             
             </div>

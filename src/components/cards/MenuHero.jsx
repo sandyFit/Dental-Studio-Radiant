@@ -38,7 +38,7 @@ const MenuHero = ({ isMenuOpen }) => {
                     </p>
                 </div>
 
-                <div className='flex flex-col justify-between items-center gap-8 absolute right-12 bottom-16'>
+                <div className='flex flex-col justify-between items-center gap-8 absolute right-[-10rem] bottom-2'>
                     <FaInstagram 
                         style={{ fontSize: '2rem', color: '#d4d4d8', cursor: 'pointer', transition: 'opacity 0.1s' }}
                         onMouseOver={(e) => e.target.style.opacity = 0.75}

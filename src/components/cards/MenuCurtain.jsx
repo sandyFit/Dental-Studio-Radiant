@@ -46,7 +46,7 @@ const MenuCurtain = ({ isMenuOpen }) => {
                     </p>
                 </div>
 
-                <div className='flex flex-col justify-between items-center gap-8 absolute left-12 bottom-[4.4rem]'>
+                <div className='flex flex-col justify-between items-center gap-8 absolute bottom-2 left-[-10rem]'>
                     <FaInstagram 
                         style={{ fontSize: '2rem', color: '#d4d4d8', cursor: 'pointer', transition: 'opacity 0.1s' }}
                         onMouseOver={(e) => e.target.style.opacity = 0.75}

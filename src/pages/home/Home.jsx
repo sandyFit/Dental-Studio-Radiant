@@ -44,7 +44,7 @@ const Home = () => {
         gsap.registerPlugin(ScrollTrigger);
 
         const sections = gsap.utils.toArray(".section");
-        const colors = ['#94a3b8', '#c4b5fd',  '#93c5fd', '#a5b4fc', '#7dd3fc']; // Colors for about, services, team, reviews, faqs
+        const colors = [ '#a4c1e0', '#c5e4e6', '#e4d1e1', '#C8C0E2', '#a4c1e0']; // Colors for about, services, team, reviews, faqs
 
         sections.forEach((section, index) => {
             if (index === 0) return; // Skip the first section (Hero)
@@ -58,14 +58,14 @@ const Home = () => {
                 onEnter: () => {
                     gsap.to('.container', {
                         backgroundColor: colors[index - 1], // Offset by one to align with sections
-                        duration: 1.5,
+                        duration: .5,
                         ease: "power2.inOut",
                     });
                 },
                 onEnterBack: () => {
                     gsap.to('.container', {
                         backgroundColor: colors[index - 1], // Offset by one to align with sections
-                        duration: 1.5,
+                        duration: .5,
                         ease: "power2.inOut",
                     });
                 },
@@ -80,14 +80,14 @@ const Home = () => {
             onEnter: () => {
                 gsap.to('.container', {
                     backgroundColor: '#cbd5e1',
-                    duration: 1.5,
+                    duration: .5,
                     ease: "power2.inOut",
                 });
             },
             onEnterBack: () => {
                 gsap.to('.container', {
                     backgroundColor: '#cbd5e1',
-                    duration: 1.5,
+                    duration: .5,
                     ease: "power2.inOut",
                 });
             },

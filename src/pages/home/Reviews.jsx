@@ -6,7 +6,7 @@ const Reviews = () => {
     return (
         <section className='flex flex-col justify-center pt-6 relative'>
 
-            <span className='flex justify-end text-xxsmall-dark uppercase mr-16 mb-0'>
+            <span className='flex justify-end text-xxsmall-dark uppercase mr-16'>
                 [04] Reviews 
             </span>
 

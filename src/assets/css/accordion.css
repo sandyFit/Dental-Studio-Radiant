@@ -1,0 +1,171 @@
+/* Global box-sizing and position reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Root variables for colors, offsets, easing, and duration */
+:root {
+    --color-white: rgba(240, 249, 255, 0.45);
+    --color-neutral-rose: #e4d1e1;
+    --color-neutral-green: #abdbd8;
+    --color-neutral-purple: #C8C0E2;
+    --color-neutral-blue: #a4c1e0;
+    --bar-item-offset: 6vw; 
+    --easing: cubic-bezier(.8, 0, .2, 1);
+    --duration: .6s;
+}
+
+/* Main container for navigation bar */
+.bar-navigation {
+    height: 80vh;
+    width: 80vw;  
+    background-color: var(--color-white);
+    display: grid;
+    grid-template-rows: 100%;
+    overflow: hidden;
+    border: 2px solid #f0f9ff;
+    border-radius: 30px;
+    font-family: 'Anybody', sans-serif;
+}
+
+/* Reset list styles */
+.accordion-bar-list,
+.accordion-bar-item { 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Navigation list setup */
+.accordion-bar-list {
+    grid-row: 1 / -1;
+    display: grid;
+    height: 100%;
+    counter-reset: list;
+}
+
+/* Individual navigation item setup */
+.accordion-bar-item {
+    --tx: calc(-100% + var(--bar-item-offset));
+    display: grid;
+    grid-template-columns: 1fr 20% auto;
+    position: absolute;
+    height: 100%;
+    width: 63vw;
+    transition: transform var(--duration) var(--easing);
+    margin-left: calc(var(--i) * var(--bar-item-offset));
+    overflow: hidden;
+    transform: translateX(var(--tx));
+    z-index: calc(var(--total) - var(--i));
+    padding-right: 1.2vw;
+}
+
+.accordion-bar-item:hover:not(:focus):after {
+    transform: none;
+}
+
+.accordion-bar-item:focus,
+.accordion-bar-item:focus-within {
+    transform: translateX(-2vw);
+    outline: none;
+}
+
+.accordion-bar-item:focus ~ .accordion-bar-item,
+.accordion-bar-item:focus-within ~ .accordion-bar-item {
+    transform: none;
+}
+
+.accordion-bar-item:before {
+    counter-increment: list;
+    content: counter(list) ".";
+    display: block;
+    grid-column: 4 / 4;
+    text-align: right;
+    font-size: 8vmin;
+    font-weight: 700;
+    padding: 1vw;
+    padding-top: 10vh;
+    color: black;
+    mix-blend-mode: soft-light;
+    z-index: 1;
+    animation: slide-up 0.6s var(--easing) forwards;
+    cursor: pointer;
+}
+
+@keyframes slide-up {
+    from { transform: translateY(130%); }
+    to { transform: translateY(0); }
+}
+
+.accordion-bar-item:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 1vw;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color);
+    transform: translateX(-1vw);
+    transition: transform var(--duration) var(--easing);
+}
+
+.accordion-bar-item {
+    animation: slide-down 1s cubic-bezier(.5,0,.3,1) forwards;
+    animation-delay: calc(var(--i) * .15s);
+    animation-fill-mode: backwards;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%) translateX(var(--tx));
+        pointer-events: none;
+    }
+    to {
+        transform: translateY(0) translateX(var(--tx));
+        pointer-events: auto;
+    }
+}
+
+/* Custom styles for the span element */
+.accordion-bar-item-text {
+    position: absolute;
+    bottom: 7rem;
+    right: -3rem;
+    transform: rotate(-90deg);
+    font-size: 1.25rem; /* equivalent to text-xl */
+    color: black;
+    font-weight: 500;
+    z-index: 10;
+    mix-blend-mode: overlay;
+    height: 0%;
+    width: 230px; /* Width of the vertical bar */
+    text-align: center;
+    line-height: 10px; /* Adjust based on your design */
+    transition: background 300ms ease;
+}
+
+.accordion-bar-item-text:hover {
+    background: #007bff; /* Change to your desired hover color */
+    color: #fff;
+    cursor: pointer;
+}
+
+.accordion-bar-item[tabindex="1"] .accordion-bar-item-text {
+    background: var(--color-neutral-rose);
+}
+
+.accordion-bar-item[tabindex="2"] .accordion-bar-item-text {
+    background: var(--color-neutral-green);
+}
+
+.accordion-bar-item[tabindex="3"] .accordion-bar-item-text {
+    background: var(--color-neutral-purple);
+}
+
+.accordion-bar-item[tabindex="4"] .accordion-bar-item-text {
+    background: var(--color-neutral-blue);
+}

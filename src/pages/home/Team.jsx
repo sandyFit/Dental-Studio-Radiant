@@ -58,9 +58,9 @@ const Team = () => {
     }, []);
 
     return (
-        <section className="w-full h-auto flex flex-col justify-center pb-2 xl:pb-12 pt-1 xl:pt-20 z-10 relative">
-            <span className='flex justify-end text-xxsmall-dark uppercase mr-16 mb-0'>
-                [03] Staff 
+        <section className="w-full h-auto flex flex-col justify-center pt-1 xl:pt-44 pb-2 xl:pb-12 z-10 relative">
+            <span className='flex justify-end text-xxsmall-dark uppercase mr-16'>
+               [03] Staff 
             </span>
             <h2 className='big-title text-center' data-aos="fade-up">
                 Meet Our 

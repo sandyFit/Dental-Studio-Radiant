@@ -100,7 +100,7 @@ const About = () => {
     
     return (
         <Element id='about'
-            className='flex flex-col pt-[3rem] rounded-t-[50px] pb-[10vh]' >
+            className='flex flex-col pt-[3rem] rounded-t-[50px]' >
 
             <span className='flex justify-end text-xxsmall-dark mr-16 mt-1'>
                 [01] About Us 
@@ -159,7 +159,7 @@ const About = () => {
                     </button>
 
                     {/* ABOUT COPY */}
-                    <h2 className='text-left text-navyBlue0  text-3xl md:text-4xl xl:text-5xl font-bold
+                    <h2 className='text-left text-navyBlue  text-3xl md:text-4xl xl:text-5xl font-bold
                         w-[89%]'>
                         Expert 
                         <span className='app-title ' style={{ margin: ' 0 1rem' }}>
