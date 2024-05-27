@@ -89,12 +89,12 @@ const ReviewsCarousel = ({ reviews }) => {
             
             <div className=" justify-center relative">
                 <div className="flex absolute right-12 top-8 space-x-4 z-20">
-                    <button className='w-12 h-12 bg-navyBlue rounded-full text-zinc-50 text-3xl flex justify-center
+                    <button className='w-12 h-12 bg-navyBlue bg-opacity-85 hover:bg-opacity-100 rounded-full text-zinc-50 text-3xl flex justify-center
                         items-center' 
                         onClick={goPrev}>
                         <HiChevronLeft />
                     </button>
-                    <button className='w-12 h-12 bg-navyBlue rounded-full text-zinc-50 text-3xl flex justify-center
+                    <button className='w-12 h-12 bg-navyBlue bg-opacity-85 hover:bg-opacity-100 rounded-full text-zinc-50 text-3xl flex justify-center
                         items-center' 
                         onClick={goNext}>
                         <HiChevronRight />

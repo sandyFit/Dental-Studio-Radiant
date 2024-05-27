@@ -38,10 +38,10 @@ const MenuCurtain = ({ isMenuOpen }) => {
                     ))}
 
                 <div className="flex flex-col items-end mt-9">
-                    <p className='ml-2 text-[1.1rem] font-medium'>
+                    <p className='ml-2 text-[1.1rem] text-zinc-950 font-medium'>
                         +1 991 318 66 99
                     </p>
-                    <p className='ml-2 text-[1.1rem] font-medium'>
+                    <p className='ml-2 text-[1.1rem] text-zinc-950 font-medium'>
                         info@radiantdental.com 
                     </p>
                 </div>
