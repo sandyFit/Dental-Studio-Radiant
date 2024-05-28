@@ -49,7 +49,7 @@ const Home = () => {
         sections.forEach((section, index) => {
             if (index === 0) return; // Skip the first section (Hero)
             
-            console.log(`Section ${index}:`, section); // Debugging line
+            // console.log(`Section ${index}:`, section); // Debugging line
 
             ScrollTrigger.create({
                 trigger: section,

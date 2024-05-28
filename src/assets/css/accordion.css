@@ -136,7 +136,7 @@
     bottom: 7rem;
     right: -3rem;
     transform: rotate(-90deg);
-    font-size: 1.25rem; /* equivalent to text-xl */
+    font-size: .8; /* equivalent to text-xl */
     color: black;
     font-weight: 500;
     z-index: 10;
@@ -154,18 +154,18 @@
     cursor: pointer;
 }
 
-.accordion-bar-item[tabindex="1"] .accordion-bar-item-text {
+.accordion-bar-item[tabindex='1']  {
     background: var(--color-neutral-rose);
 }
 
-.accordion-bar-item[tabindex="2"] .accordion-bar-item-text {
+.accordion-bar-item[tabindex="2"]  {
     background: var(--color-neutral-green);
 }
 
-.accordion-bar-item[tabindex="3"] .accordion-bar-item-text {
+.accordion-bar-item[tabindex="3"]  {
     background: var(--color-neutral-purple);
 }
 
-.accordion-bar-item[tabindex="4"] .accordion-bar-item-text {
+.accordion-bar-item[tabindex="4"]  {
     background: var(--color-neutral-blue);
 }

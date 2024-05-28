@@ -72,14 +72,14 @@ const ReviewsCarousel = ({ reviews }) => {
         for (let i = 0; i < visibleCards; i++) {
             const reviewIndex = (activeIndex + i) % reviews.length;
             const review = reviews[reviewIndex];
-            console.log(`Rendering card for review at index: ${reviewIndex}`, review);
+            //console.log(`Rendering card for review at index: ${reviewIndex}`, review);
             if (review) {
                 cards.push(
                     <ReviewsCard key={reviewIndex} index={reviewIndex} {...review} />
                 );
             }
         }
-        console.log(cards); // Debug: Check the resulting cards array
+        //console.log(cards); // Debug: Check the resulting cards array
         return cards;
     };
 
@@ -89,13 +89,13 @@ const ReviewsCarousel = ({ reviews }) => {
             
             <div className=" justify-center relative">
                 <div className="flex absolute right-12 top-8 space-x-4 z-20">
-                    <button className='w-12 h-12 bg-navyBlue bg-opacity-85 hover:bg-opacity-100 rounded-full text-zinc-50 text-3xl flex justify-center
-                        items-center' 
+                    <button className='w-12 h-12 bg-navyBlue bg-opacity-85 hover:bg-opacity-100 rounded-full 
+                        text-zinc-50 text-3xl flex justify-center items-center' 
                         onClick={goPrev}>
                         <HiChevronLeft />
                     </button>
-                    <button className='w-12 h-12 bg-navyBlue bg-opacity-85 hover:bg-opacity-100 rounded-full text-zinc-50 text-3xl flex justify-center
-                        items-center' 
+                    <button className='w-12 h-12 bg-navyBlue bg-opacity-85 hover:bg-opacity-100 rounded-full 
+                        text-zinc-50 text-3xl flex justify-center items-center' 
                         onClick={goNext}>
                         <HiChevronRight />
                     </button>

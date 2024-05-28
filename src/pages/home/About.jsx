@@ -71,32 +71,32 @@ const About = () => {
 
     const imgRef = useRef(null);
 
-  useEffect(() => {
-    const img = imgRef.current;
+    useEffect(() => {
+        const img = imgRef.current;
 
-    gsap.from(img, {
-      opacity: 0,
-      y: -20, // Adjust the y value to move the image upwards
-      duration: 3,
-      ease: "power2.out",
-    });
-
-    ScrollTrigger.create({
-      trigger: img,
-      start: "top 80%",
-      end: "bottom 80%",
-      onEnter: () => {
-        gsap.to(img, {
-          opacity: 1,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-          ease: "power2.out",
-          duration: 3,
+        gsap.from(img, {
+        opacity: 0,
+        y: -20, // Adjust the y value to move the image upwards
+        duration: 3,
+        ease: "power2.out",
         });
-      },
-      once: false, // Repeat the animation every time it's scrolled
-      refreshPriority: 0 // Ensure the trigger is refreshed before each animation frame
-    });
-  }, []);
+
+        ScrollTrigger.create({
+            trigger: img,
+            start: "top 80%",
+            end: "bottom 80%",
+            onEnter: () => {
+                gsap.to(img, {
+                opacity: 1,
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                ease: "power2.out",
+                duration: 3,
+                });
+            },
+            once: false, // Repeat the animation every time it's scrolled
+            refreshPriority: 0 // Ensure the trigger is refreshed before each animation frame
+            });
+    }, []);
     
     return (
         <Element id='about'
