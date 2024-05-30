@@ -195,6 +195,9 @@
             border-azure shadow-xl shadow-midnight
     }
 
+    .text-xxxsmall {
+        @apply  text-sm font-[400]  text-slate-400
+    }
     .text-xxsmall-white {
         @apply  font-[600] uppercase text-slate-300
     }

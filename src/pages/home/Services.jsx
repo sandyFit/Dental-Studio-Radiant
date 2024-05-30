@@ -4,7 +4,7 @@ import services from '../../data/services'
 import ServicesCard from '../../components/cards/ServicesCard';
 import ModalServices from '../../components/cards/ModalServices';
 import ServicesBigCard from '../../components/cards/ServicesBigCard';
-import Accordion from '../../components/cards/Accordion';
+
 
 const Services = () => {
 
@@ -56,7 +56,7 @@ const Services = () => {
                         enhancing both the aesthetics and longevity of your smile.
                     </p>
                     
-                    <div className="flex mt-6" data-aos='zoom-in-up'>
+                    <div className="flex mt-6" >
                         <ServicesBigCard/>
                     </div>
 

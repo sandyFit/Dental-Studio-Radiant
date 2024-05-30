@@ -6,6 +6,12 @@
   position: relative;
 }
 
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* Root variables for colors, offsets, easing, and duration */
 :root {
     --color-white: rgba(240, 249, 255, 0.45);
@@ -86,12 +92,14 @@
     text-align: right;
     font-size: 8vmin;
     font-weight: 700;
-    padding: 1vw;
-    padding-top: 10vh;
+    position: absolute;
+    top: 3rem;
+    right: .8rem;
+    /* padding-top: 10vh; */
     color: black;
     mix-blend-mode: soft-light;
     z-index: 1;
-    animation: slide-up 0.6s var(--easing) forwards;
+    /* animation: slide-up 0.6s var(--easing) forwards; */
     cursor: pointer;
 }
 
@@ -111,7 +119,7 @@
     background-color: var(--color);
     transform: translateX(-1vw);
     transition: transform var(--duration) var(--easing);
-}
+} 
 
 .accordion-bar-item {
     animation: slide-down 1s cubic-bezier(.5,0,.3,1) forwards;
@@ -135,16 +143,16 @@
     position: absolute;
     bottom: 7rem;
     right: -3rem;
-    transform: rotate(-90deg);
-    font-size: .8; /* equivalent to text-xl */
+    font-size: 1.2rem; /* equivalent to text-xl */
     color: black;
     font-weight: 500;
+    rotate: -90deg;
     z-index: 10;
     mix-blend-mode: overlay;
     height: 0%;
     width: 230px; /* Width of the vertical bar */
     text-align: center;
-    line-height: 10px; /* Adjust based on your design */
+    letter-spacing: -.3px; /* Adjust based on your design */
     transition: background 300ms ease;
 }
 

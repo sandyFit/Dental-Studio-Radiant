@@ -43,7 +43,7 @@ const NewsletterInput = () => {
                     <Button text={'submit'}/>
                 </div>
             </form>
-            <p className='text-zinc-300 font-thin '>
+            <p className='text-zinc-300 text-xxsmall font-thin '>
                 Occasionally we send newsletters containing practice news. If you'd like to receive this
                 information, sign up to our email above. We take your privacy seriously and ensure that your
                 information will not be passed on to anyone.
