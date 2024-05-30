@@ -44,7 +44,7 @@ const Home = () => {
         gsap.registerPlugin(ScrollTrigger);
 
         const sections = gsap.utils.toArray(".section");
-        const colors = [ '#a4c1e0', '#c5e4e6', '#e4d1e1', '#C8C0E2', '#a4c1e0']; // Colors for about, services, team, reviews, faqs
+        const colors = [ '#cbd5e1', '#6366f1', '#cbd5e1', '#6366f1', '#cbd5e1']; // Colors for about, services, team, reviews, faqs
 
         sections.forEach((section, index) => {
             if (index === 0) return; // Skip the first section (Hero)

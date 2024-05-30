@@ -6,7 +6,7 @@ const Reviews = () => {
     return (
         <section className='flex flex-col justify-center pt-6 relative'>
 
-            <span className='flex justify-end text-xxsmall-dark uppercase mr-16'>
+            <span className='flex justify-end text-xxsmall-white uppercase mr-16'>
                 [04] Reviews 
             </span>
 
@@ -14,21 +14,21 @@ const Reviews = () => {
                 <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
                     w-2/3 md:w-2/4 lg:w-[80%] pt-2 lg:pt-4' data-aos='fade-up'>
                     Your  
-                    <span className='app-title' style={{ margin: ' 0 1rem' }}>
+                    <span className='text-zinc-50' style={{ margin: ' 0 1rem' }}>
                         Opinion
                     </span>   
                     Matters
                 </h2>
 
-                <p className='text-lg md:text-xl 2xl:text-[1.4rem text-zinc-950 font-[400] mt-2 w-3/4 
-                        2xl:w-[70%]'
+                <p className='text-lg md:text-xl 2xl:text-[1.4rem] text-zinc-950 font-[400] mt-2 w-3/4 
+                        2xl:w-[70%] z-20'
                         data-aos="fade-up"
                     >
                     Radiant Dental Studio always appreciates feedback from our valued patients.
                     To date, we're thrilled to have collected over 100 reviews with an average rating of 5 out of 5 stars.
                     Please read what others are saying about us below, and as always, we would love to
-                    <span className='border-b-2 border-azure' style={{ margin: ' 0 .6rem' }}>
-                        <a href="#">collect your feedback.</a>
+                    <span className='border-b-2 border-zinc-900 hover:border-zinc-50' style={{ margin: ' 0 .6rem' }}>
+                        <a href="#" className='hover:text-zinc-50'>collect your feedback.</a>
                     </span>
                 </p>
             </div>

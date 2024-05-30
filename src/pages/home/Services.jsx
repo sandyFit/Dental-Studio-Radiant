@@ -30,7 +30,7 @@ const Services = () => {
         
     return (
         <section className='w-full rounded-b-[30px]'>
-            <span className='flex justify-end text-xxsmall-dark mr-16'>
+            <span className='flex justify-end text-xxsmall-white mr-16'>
                 [02] Services 
             </span>
             <div className="flex  justify-center">
@@ -39,7 +39,7 @@ const Services = () => {
                     <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
                         w-2/3 md:w-2/4 lg:w-3/5 pt-2 tracking-wider' data-aos="fade-up">                   
                             Service and Safety is Our  
-                        <span className='app-title ml-4' >
+                        <span className='text-zinc-50 ml-4' >
                             Top Priority
                         </span>         
                     </h2>

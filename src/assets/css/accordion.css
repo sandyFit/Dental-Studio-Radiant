@@ -67,6 +67,7 @@
     transform: translateX(var(--tx));
     z-index: calc(var(--total) - var(--i));
     padding-right: 1.2vw;
+    opacity: 0;
 }
 
 .accordion-bar-item:hover:not(:focus):after {
@@ -121,14 +122,20 @@
     transition: transform var(--duration) var(--easing);
 } 
 
-.accordion-bar-item {
+.item-animation {
+    opacity: 1;
     animation: slide-down 1s cubic-bezier(.5,0,.3,1) forwards;
     animation-delay: calc(var(--i) * .15s);
     animation-fill-mode: backwards;
 }
 
+.accordion-bar-item.open {
+    background-color: #f5f5f5; /* Add your desired open state styles here */
+    transform: scale(1.05);
+}
+
 @keyframes slide-down {
-    from {
+    from {       
         transform: translateY(-100%) translateX(var(--tx));
         pointer-events: none;
     }

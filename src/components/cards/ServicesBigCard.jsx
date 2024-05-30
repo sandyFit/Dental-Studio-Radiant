@@ -4,15 +4,34 @@ import servicesCardData from '../../data/servicesCardData';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
-
 const ServicesBigCard = () => {
-    // Check if servicesCardData is defined
+    gsap.registerPlugin(ScrollTrigger);
+
+    useEffect(() => {
+        // Check if servicesCardData is defined
+        if (!servicesCardData || !Array.isArray(servicesCardData)) {
+            console.error("servicesCardData is undefined or not an array");
+            return;
+        }
+        
+        const items = document.querySelectorAll('.accordion-bar-item');
+
+        // Apply ScrollTrigger to each item
+        items.forEach((item, index) => {
+            ScrollTrigger.create({
+                trigger: item,
+                start: 'top center', // Adjust this value as needed
+                onEnter: () => item.classList.add('item-animation'),
+                onComplete: () => item.classList.add('open'),
+                once: false // Ensure animation happens only once
+            });
+        });
+    }, []);
+
+    // Avoid rendering if servicesCardData is undefined or not an array
     if (!servicesCardData || !Array.isArray(servicesCardData)) {
-        console.error("servicesCardData is undefined or not an array");
         return null;
     }
-
-  
 
     return (
         <article className="">
