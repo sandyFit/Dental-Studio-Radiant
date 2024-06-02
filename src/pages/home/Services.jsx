@@ -30,28 +30,33 @@ const Services = () => {
         
     return (
         <section className='w-full rounded-b-[30px]'>
-            <span className='flex justify-end text-xxsmall-white mr-16'>
-                [02] Services 
-            </span>
+             <div className="flex justify-between text-med-dark mx-32 mb-6">
+                <span className='flex '>
+                   ( 02
+                </span>
+                <span className='flex '>
+                    Services )
+                </span>
+            </div>
             <div className="flex  justify-center">
 
                 <div className="flex flex-col items-center gap-8 relative">
-                    <h2 className='text-center text-navyBlue text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
+                    <h2 className='text-center text-indigo-900 text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
                         w-2/3 md:w-2/4 lg:w-3/5 pt-2 tracking-wider' data-aos="fade-up">                   
-                            Service and Safety is Our  
-                        <span className='text-zinc-50 ml-4' >
+                            Service and Safety Are Our  
+                        <span className='text-indigo-200 ml-4' >
                             Top Priority
                         </span>         
                     </h2>
 
-                    <p className='text-lg md:text-xl 2xl:text-[1.4rem text-zinc-950 font-[400] mt-2 w-3/4 
-                        2xl:w-[70%]'
+                    <p className='text-lg md:text-xl 2xl:text-[1.4rem] text-indigo-900 font-[600] mt-2 w-3/4 
+                        2xl:w-[70%] z-20'
                         data-aos="fade-up"
                     >
                         Our comprehensive dental services
                         provide the treatments you need to look and feel your best!
                         We're dedicated to ensuring all our patients receive dental care that never compromises on quality.
-                        <br/>
+                        
                         Trust us for a wide range of treatments aimed at
                         enhancing both the aesthetics and longevity of your smile.
                     </p>

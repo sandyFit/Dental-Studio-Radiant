@@ -36,20 +36,25 @@ const Faqs = () => {
     return (
         <section className='relative h-auto pt-40'>   
 
-            <span className='flex justify-end text-xxsmall-dark uppercase mr-16 '>
-                [05] Faqs 
-            </span>
+             <div className="flex justify-between text-med-dark mx-32 mb-6">
+                <span className='flex '>
+                   ( 05
+                </span>
+                <span className='flex '>
+                    Faqs )
+                </span>
+            </div>
             
             <div className="w-full flex flex-col justify-center items-center relative">
 
                 <div className="w-full relative hue-effect">
-                    <h2 className='text-indigo-400 text-8xl font-[600] text-center mb-3 absolute top-0 left-[26rem]  '>
+                    <h2 className='text-indigo-900 text-8xl font-[600] text-center mb-3 absolute top-0 left-[26rem]  '>
                         Got Questions?
                     </h2>
-                    <h2 ref={highHueRef}
+                    {/* <h2 ref={highHueRef}
                         className='text-8xl font-[600] text-center mb-3 absolute top-0 left-[26rem] whitespace-nowrap'>
                         Got Questions?
-                    </h2>
+                    </h2> */}
                 </div>
                 <div>
                     <h2 className='text-center app-title text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold

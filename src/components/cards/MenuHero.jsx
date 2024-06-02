@@ -30,10 +30,10 @@ const MenuHero = ({ isMenuOpen }) => {
                     ))}
 
                 <div className="flex flex-col mt-9">
-                    <p className='ml-2 text-[1.1rem] text-zinc-950 font-medium'>
+                    <p className='ml-2 text-[1.1rem] text-indigo-900 font-[600]'>
                         +1 991 318 66 99
                     </p>
-                    <p className='ml-2 text-[1.1rem] text-zinc-950 font-medium'>
+                    <p className='ml-2 text-[1.1rem] text-indigo-900 font-[600]'>
                         info@radiantdental.com 
                     </p>
                 </div>

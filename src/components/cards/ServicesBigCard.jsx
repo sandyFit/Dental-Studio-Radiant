@@ -50,7 +50,7 @@ const ServicesBigCard = () => {
 
                             <div className="grid ml-24 my-24 gap-1">
                                 <div className="grid grid-cols-1">
-                                    <h2 className='text-navyBlue text-2xl font-bold tracking-wider z-30'>
+                                    <h2 className='text-indigo-900 text-2xl font-bold tracking-wider z-30'>
                                         {service.title}
                                     </h2>
                                     <p className="text-zinc-900 mb-4 z-30">

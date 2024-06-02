@@ -1,43 +1,75 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { renderDescription } from '../../utils/functions';
 import { HiStar } from 'react-icons/hi';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const ReviewsCard = ({name, srcImg, review}) => {
+const ReviewsCard = ({ name, srcImg, review }) => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const imgRef = useRef(null);
+
+    useEffect(() => {
+        const img = imgRef.current;
+
+        gsap.fromTo(img, {
+            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+            opacity: 0,
+        }, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            opacity: 1,
+            duration: 1,
+            delay: .3,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: img,
+                start: "top 80%",
+                end: "bottom 80%",
+                once: true, // Animation will run only once
+            },
+        });
+    }, []);
+
     return (
-        <article className='w-[70%] lg:w-[33%] 2xl:w-[30%] bg-zinc-50 bg-opacity-45 border-[3px] border-zinc-50
-            rounded-3xl p-12 pb-16 mt-12 relative'>           
-            <div className="flex justify-start items-center space-x-4">
-                <div >
-                    <img src={srcImg}
-                        alt={`${name} avatar`}
-                        className='border-4 border-violet-400 rounded-full'
-                    />
-                </div>
+        <section className='flex justify-center items-center w-full relative'>
+            <div className="flex justify-center items-center gap-6">
+                <article className="grid grid-cols-1 gap-6">
+                    <div className='w-[20.8rem] h-[20.8rem] rounded-xl bg-indigo-800 bg-opacity-35 overflow-hidden '>
+                        <img
+                            ref={imgRef}
+                            src={srcImg}
+                            alt={`${name} avatar`}
+                            className='w-full h-full object-cover rounded-xl'
+                        />
+                    </div>
 
-                <div className="flex flex-col">
-                    <h4 className='app-title text-[1.5rem] font-bold '>
-                        {name}
-                    </h4>
-                    <div className='flex space-x-2'>
-                        <span className='flex  text-azure'>
+                    <div className="flex flex-col w-[20.8rem] h-20 bg-indigo-300 rounded-xl justify-center items-center">
+                        <h4 className='app-title text-[1.6rem] font-[700]'>
+                            {name}
+                        </h4>
+                    </div>
+                </article>
+
+                <article className="grid grid-cols-1 gap-6">
+                    <div className="w-[44rem] h-[20.8rem] bg-indigo-400 rounded-2xl text-zinc-50 px-16 relative">
+                        <span className='text-[12rem] absolute bottom-16'>”</span>
+                        <p className=' font-[400] mt-[8rem] m-0 p-0'>
+                            {renderDescription(review)}
+                        </p>
+                    </div>
+
+                    <div className='flex w-[23.4rem] h-20 bg-indigo-400 justify-center items-center rounded-xl'>
+                        <span className='flex text-indigo-500'>
                             {[...Array(5)].map((_, index) => (
-                                <HiStar key={index} style={{fontSize: '1rem'} } />
+                                <HiStar key={index} style={{ fontSize: '3.6rem' }} />
                             ))}
                         </span>
                     </div>
-                </div>
-
-
-                
+                </article>
             </div>
-
-
-            <p className='text-zinc-950 text-sm font-[400] pt-6'>
-                {renderDescription(review)}
-            </p>       
-        </article>
-    )
-}
+        </section>
+    );
+};
 
 export default ReviewsCard;
 
