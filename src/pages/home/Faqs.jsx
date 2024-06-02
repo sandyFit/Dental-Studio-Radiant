@@ -63,8 +63,8 @@ const Faqs = () => {
                     </h2>     
                 </div> 
 
-                <div className="flex flex-col justify-center items-center space-y-6 pb-32"
-                    data-aos='zoom-in-up'
+                <div className="flex flex-col justify-center items-center space-y-6 pb-60"
+                    
                 >
                     {questions.map((question, index) => (
                     <QuestionCard

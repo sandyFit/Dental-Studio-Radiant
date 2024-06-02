@@ -2,7 +2,7 @@ import React from 'react';
 import servicesCardData from '../../data/servicesCardData';
 
 const ServiceCard = ({ service, index }) => (
-    <div className='w-[70vw] h-[35vw] flex gap-6 mb-40 sticky top-20'>
+    <div className='w-[70vw] h-[35vw] flex gap-6 mb-40 sticky top-24'>
         <article  className='relative w-[30%] h-full bg-indigo-300 rounded-[20px]'>
             <img src={service.imgSrc} alt={service.title}
                 className='w-full h-full object-cover rounded-[20px]' />

@@ -54,12 +54,9 @@ const Services = () => {
                         2xl:w-[70%] z-20'
                         data-aos="fade-up"
                     >
-                        Our comprehensive dental services
-                        provide the treatments you need to look and feel your best!
-                        We're dedicated to ensuring all our patients receive dental care that never compromises on quality.
-                        
-                        Trust us for a wide range of treatments aimed at
-                        enhancing both the aesthetics and longevity of your smile.
+                        Experience top-quality dental care that enhances the beauty and longevity of your smile.
+                        Our expert team prioritizes both aesthetics and well-being, ensuring comprehensive services
+                        that make you look and feel your best.
                     </p>
                     
                     <div className="flex mt-6" >

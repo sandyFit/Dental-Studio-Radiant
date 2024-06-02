@@ -31,7 +31,7 @@ const MenuHero = ({ isMenuOpen }) => {
 
                 <div className="flex flex-col mt-9">
                     <p className='ml-2 text-[1.1rem] text-indigo-900 font-[600]'>
-                        +1 991 318 66 99
+                        +1 666 333 69 69
                     </p>
                     <p className='ml-2 text-[1.1rem] text-indigo-900 font-[600]'>
                         info@radiantdental.com 
