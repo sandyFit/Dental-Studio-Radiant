@@ -1,30 +1,28 @@
 import React from 'react';
 
+const MotionText = ({ icon, part1, part2 }) => {
+    const renderTextBlock = () => (
+        <>
+            <span className='app-title text-opacity-45 font-outline-2 mx-24'>{icon}</span>
+            <span className='text-indigo-900 mr-4'>{part1}</span>
+            <span className="app-title">{part2}</span>
+        </>
+    );
 
-const MotionText = ({icon, part1, part2, part3}) => {
     return (
-        <div className="text-slider-container font-anybody text-5xl md:text-7xl lg:text-[5.5rem] xl:text-[10rem] font-[500]"
+        <div className="text-slider-container font-anybody text-5xl  font-[500] pb-8"
             style={{ overflow: 'hidden' }}>
-            <h2 className='text-center text-navyBlue motion-text font-regular '>
+            <h2 className='text-center text-indigo-900 motion-text font-regular'>
                 <div style={{ display: 'flex', whiteSpace: 'nowrap' }}>
-                    <span className='text-zinc-50 text-opacity-45 font-outline-2 mx-20 rotating-icon'>{icon}</span>
-                    <span className='text-navyBlue mr-10'>
-                        {part1} 
-                    </span>
-                    <span className="app-title mr-10">{part2}</span>
-                    <span className="text-navyBlue">{part3}</span>
-                    <span className='text-zinc-50 text-opacity-45 font-outline-2 mx-20 rotating-icon'>{icon}</span>
-                    <span className='text-navyBlue mr-10'>
-                        {part1} 
-                    </span>
-                    <span className="app-title mr-10">{part2}</span>
-                    <span className="text-navyBlue">{part3}</span>
-                    
+                    {Array(6).fill(null).map((_, index) => (
+                        <React.Fragment key={index}>
+                            {renderTextBlock()}
+                        </React.Fragment>
+                    ))}
                 </div>
             </h2>
         </div>
     );
-
 };
 
 export default MotionText;

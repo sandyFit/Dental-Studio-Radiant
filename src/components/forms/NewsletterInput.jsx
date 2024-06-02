@@ -30,20 +30,20 @@ const NewsletterInput = () => {
                 <input
                     type="email"
                     id="email"
-                    className="bg-niceBlue border-4 border-blue-400 
-                            text-azure text-lg rounded-lg focus:outline-none
-                            focus:ring-2 focus:ring-azure focus:border-azure
+                    className="bg-indigo-100 border-4 border-indigo-400 
+                            text-indigo-400 text-lg rounded-lg focus:outline-none
+                            focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400
                             block w-full p-2.5"
                     placeholder="john.doe@company.com"
                     required
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                 />
-                <div className="mt-6 transparent-btn w-[10rem] py-2 hover:text-zinc-50">
+                <div className="mt-6 transparent-btn w-[10rem] py-2 hover:text-indigo-200">
                     <Button text={'submit'}/>
                 </div>
             </form>
-            <p className='text-zinc-300 text-xxsmall font-thin '>
+            <p className='text-zinc-300 text-xxsmall-min font-thin '>
                 Occasionally we send newsletters containing practice news. If you'd like to receive this
                 information, sign up to our email above. We take your privacy seriously and ensure that your
                 information will not be passed on to anyone.

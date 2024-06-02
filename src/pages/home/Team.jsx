@@ -58,7 +58,7 @@ const Team = () => {
     }, []);
 
     return (
-        <section className="w-full h-auto flex flex-col justify-center pt-1 xl:pt-44 pb-2 xl:pb-12 z-10 relative">
+        <section className="w-full h-auto flex flex-col justify-center pb-2 xl:pb-12 z-10 relative">
              <div className="flex justify-between text-med-dark mx-32 mb-6">
                 <span className='flex '>
                    ( 03

@@ -24,7 +24,7 @@ const QuestionCard = ({ question, answer, isOpen, onToggle }) => {
 
             { isOpen && (
                 <div className=" text-lg content">
-                    <p className='px-12 pb-12 text-zinc-950 font-[400]'>
+                    <p className='px-12 pb-12 text-indigo-900 font-[400]'>
                         {renderDescription(answer)}
                     </p>
                 </div>

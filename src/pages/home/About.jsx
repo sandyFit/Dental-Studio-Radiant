@@ -108,7 +108,7 @@ const About = () => {
                 {/* FLOATING MENU BUTTON  */}
                 <button onClick={toggleMenu}
                         className={`fixed w-20 h-20 top-8 left-10 group inline-flex items-center 
-                            justify-center overflow-hidden rounded-full bg-sky-50 bg-opacity-45 border-2 border-[#fff] 
+                            justify-center overflow-hidden rounded-full bg-indigo-50 bg-opacity-95 border-[3px] border-[#fff] 
                             z-[1000] ${showFloatingBtn ? '' : 'invisible'} `}>
                         <div className="group relative flex items-center gap-2">
 
@@ -131,7 +131,7 @@ const About = () => {
                     {/* FLOATING BUTTON TO GO TOP */}
                     <button onClick={scrollToTop}
                         className={`fixed p-5 right-10 bottom-20 group inline-flex  items-center 
-                            justify-center overflow-hidden rounded-full bg-sky-50 bg-opacity-45 border-2 border-[#fff] 
+                            justify-center overflow-hidden rounded-full bg-indigo-50 bg-opacity-95 border-[3px] border-[#fff] 
                             z-[1000] ${showFloatingBtn ? '' : 'invisible'}`}>
                         <div className="transition duration-300 group-hover:rotate-[360deg] text-indigo-900">
                             <HiArrowUp style={{fontSize: '2.2rem'}}/>
@@ -140,7 +140,7 @@ const About = () => {
             </div>
 
             <div className="w-full flex flex-col xl:flex-row justify-between items-center py-[3rem] px-32 relative">                             
-                <article className="w-[35vw] rounded-[20px] bg-indigo-600 bg-opacity-55 overflow-hidden">
+                <article className="w-[35vw] rounded-[20px] bg-indigo-500 overflow-hidden">
                 {/* ABOUT IMAGE */}                                   
                     <img  ref={imgRef}                     
                         src="/images/dental-studio.jpg"

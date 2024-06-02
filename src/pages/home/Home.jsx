@@ -8,6 +8,7 @@ import Services from './Services';
 import Team from './Team';
 import Reviews from './Reviews';
 import Faqs from './Faqs';
+import ContactTransition from '../transitions/ContactTransition';
 
 const Home = () => {
     useEffect(() => {
@@ -114,6 +115,9 @@ const Home = () => {
             </section>
             <section id="faq" className="section">
                 <Faqs />
+            </section>
+            <section id="t1" className="section">
+                <ContactTransition />
             </section>
         </div>
     );

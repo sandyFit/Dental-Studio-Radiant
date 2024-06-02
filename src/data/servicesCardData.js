@@ -2,12 +2,13 @@
 const servicesCardData = [
     {
         title: "General Dentistry",
+        imgSrc: '/services/general.jpeg',
         description: "Treatments to ensure your teeth remain disease-free, functional, and aesthetic throughout your life.",
         categories: [
-            {
-                name: "Examination",
-                description: "We take considerable time getting to know you as a person and tailoring a dental preventative plan around you."
-            },
+            // {
+            //     name: "Examination",
+            //     description: "We take considerable time getting to know you as a person and tailoring a dental preventative plan around you."
+            // },
             {
                 name: "Dental Emergencies",
                 description: "Emergency appointments are available every day, and we try to see you as quickly as possible."
@@ -32,6 +33,7 @@ const servicesCardData = [
     },
     {
         title: "Hygiene and Therapy",
+        imgSrc: '/services/higiene.jpeg',
         description: "Treatments that keep your gums disease-free and healthy throughout life.",
         categories: [
             {
@@ -46,24 +48,27 @@ const servicesCardData = [
     },
     {
         title: "Orthodontics",
+        imgSrc: '/services/brackets.jpeg',
         description: "Treatments that enable you have beautifully aligned teeth.",
         categories: [
             {
                 name: "Invisalign",
                 description: "Invisalign is an orthodontic treatment that is used to align misaligned teeth. \n\nIt consists of see-through braces known as aligners that allow your teeth to be moved discretely without anyone knowing. Each case has a series of aligners that slowly move your teeth into position. \n\nThe aligners need to be changed every 1-2 weeks, and they can be changed directly by you."                                
             },
-            {
-                name: "Night Guards",
-                description: "If you wake up with a throbbing and tender jaw, you might be grinding your teeth or clench your jaw when you sleep. \n\nYou might also experience distressing headaches and toothaches. Wearing a night guard while you sleep protects your dental health and enhances your sleep quality. \n\nNight guards work by placing a barrier between your upper and lower teeth."
-            },
+            
             {
                 name: "Ceramic Braces",
                 description: "Ceramic braces — sometimes called clear braces — work the same way as metal braces. \n\nThe key difference is that the brackets, wires and ligatures are tooth-colored, so they blend in with your smile. Ceramic braces are still visible, but they're less noticeable. \n\nOne drawback to ceramic braces is that they're more fragile than metal braces, so they're more likely to break."
-            }
+            },
+            {
+                name: "Night Guards",
+                description: "Wearing a night guard while you sleep protects your dental health and enhances your sleep quality. \n\nNight guards work by placing a barrier between your upper and lower teeth."
+            },
         ]
     },
     {
         title: "Cosmetic Dentistry",
+        imgSrc: '/services/cosmetic.jpeg',
         description: "Treatments that enable you have beautifully aligned teeth.",
         categories: [
             {

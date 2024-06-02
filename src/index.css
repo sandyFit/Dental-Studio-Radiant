@@ -77,7 +77,7 @@
 .motion-text {
     display: inline-block;
     white-space: nowrap;
-    animation: slideLeft 10s linear infinite;
+    animation: slideLeft 40s linear infinite;
 }
 
 @keyframes rotateIcon {
@@ -182,34 +182,37 @@
 
     /*========= BUTTONS =========*/
     .btn-book-online {
-        @apply button text-zinc-50 bg-custom-gradient-btn  border-zinc-50
+        @apply button text-indigo-50 bg-custom-gradient-btn  border-indigo-50
             
     }
     .btn-book-online-transparent {
-        @apply button text-indigo-900 bg-sky-50 bg-opacity-45 border-2  border-zinc-50
+        @apply button text-indigo-900 bg-indigo-50 bg-opacity-45 border-2  border-indigo-50
             
     }
 
     .transparent-btn {
-        @apply button text-azure bg-transparent  
-            border-azure shadow-xl shadow-midnight
+        @apply button text-indigo-400 bg-transparent  
+            border-indigo-400 shadow-xl shadow-midnight
     }
 
     .text-xxxsmall {
-        @apply  text-sm font-[400]  text-slate-400
+        @apply  text-sm font-[400]  text-indigo-300
     }
     .text-xxsmall-white {
-        @apply  font-[600] uppercase text-slate-300
+        @apply  font-[300] uppercase text-indigo-300
+    }
+    .text-xxsmall-min {
+        @apply  font-[300] text-indigo-300
     }
 
     .text-xxsmall-dark {
-        @apply  font-[600] uppercase text-slate-500
+        @apply  font-[600] uppercase text-indigo-500
     }
     .text-xsmall-white {
-        @apply text-lg font-[600] uppercase text-slate-500
+        @apply text-lg font-[600] uppercase text-indigo-300
     }
     .text-small-white {
-        @apply text-xl font-[600] uppercase text-slate-500
+        @apply text-xl font-[600] uppercase text-indigo-300
     }
 
     .text-small-dark {
@@ -217,11 +220,11 @@
     }
 
     .text-xsmall-dark {
-        @apply text-lg font-[600]  text-indigo-900
+        @apply text-lg font-[600] text-indigo-900
     }
 
     .text-med {
-        @apply text-2xl font-[600]  text-zinc-300
+        @apply text-2xl font-[600] text-indigo-100
     }
 
     .text-med-dark {

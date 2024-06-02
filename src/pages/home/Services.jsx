@@ -4,6 +4,7 @@ import services from '../../data/services'
 import ServicesCard from '../../components/cards/ServicesCard';
 import ModalServices from '../../components/cards/ModalServices';
 import ServicesBigCard from '../../components/cards/ServicesBigCard';
+import ServicesDashboard from '../../components/cards/ServicesDashboard';
 
 
 const Services = () => {
@@ -62,7 +63,7 @@ const Services = () => {
                     </p>
                     
                     <div className="flex mt-6" >
-                        <ServicesBigCard/>
+                        <ServicesDashboard/>
                     </div>
 
                     {/* <article className="flex flex-wrap gap-20 w-full md:w-4/5 lg:w-4/5 mt-4 justify-center"

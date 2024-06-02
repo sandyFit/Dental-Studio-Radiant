@@ -7,12 +7,12 @@ const ContactCard = () => {
   return (
     <article className='bg-custom-gradient-bg-cards h-[38.70rem] w-[30rem] flex flex-col items-center space-y-4 
       relative z-10'>
-          <h4 className='text-white text-center text-2xl font-[600] mt-20'>
+          <h4 className='text-med text-center mt-20'>
             CONTACT US
           </h4>
 
       <div className='flex flex-col items-start pt-4 px-16'>
-        <h5 className='text-spaceCadet text-[1.1rem] uppercase font-[700] text-left'>
+        <h5 className='text-indigo-900 text-[1.1rem] uppercase font-[700] text-left'>
           we welcome your inquiries by phone or email.
         </h5>
 
@@ -44,7 +44,7 @@ const ContactCard = () => {
 
       {/* <hr className='w-[46%] border-t-[1px] border-zinc-50 mt-8'/> */}
       
-      <h5 className='text-spaceCadet text-center text-[1.1rem] uppercase font-[700] '>
+      <h5 className='text-indigo-900 text-center text-[1.1rem] uppercase font-[700] '>
           Follow us everywhere
         </h5>
         
