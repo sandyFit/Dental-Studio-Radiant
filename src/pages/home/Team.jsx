@@ -28,8 +28,9 @@ const Team = () => {
         })
     }, []);
 
+    gsap.registerPlugin(ScrollTrigger);
+
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
 
         const workItems = document.querySelectorAll('.work__photo-item');
 
@@ -57,18 +58,44 @@ const Team = () => {
         });
     }, []);
 
+ 
+
+    const lineRef = useRef(null);
+
+    useEffect(() => {
+        gsap.fromTo(
+            lineRef.current,
+            { width: '0%' },
+            {
+                width: '20%', // Change this value to your desired width
+                duration: 1.5,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: lineRef.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none',
+                },
+            }
+        );
+
+        return () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    }, []);
+
     return (
         <section className="w-full h-auto flex flex-col justify-center pb-2 xl:pb-12 z-10 relative">
-             <div className="flex justify-between text-med-dark mx-32 mb-6">
-                <span className='flex '>
-                   ( 03
-                </span>
-                <span className='flex '>
-                    Staff )
-                </span>
+           <div className="w-full flex justify-end items-center text-med-dark mb-9 relative gap-6">
+                <span
+                    className="absolute left-[58rem] top-1/2 transform -translate-y-1/2 h-[0.1rem] bg-indigo-800"
+                    ref={lineRef}
+                    style={{ width: '0%' }} // Initial width set to 0%
+                ></span>
+                <span className="mr-32 relative">03 — Team</span>
             </div>
 
-            <h2 className='big-title text-center' data-aos="fade-up">
+            <h2 data-aos='fade-up'
+                className='big-title text-center'>
                 Meet Our 
                 <span className='app-title ml-8'>Team</span>
             </h2>
@@ -78,11 +105,13 @@ const Team = () => {
                         {bioData.map((member, index) => (
                             <div key={index} className={`bio-${index} w-full h-[100vh] flex flex-col justify-center`}>
                                 <div className="ml-16 relative w-full z-20">
-                                    <h3 className="text-left text-indigo-900 text-2xl md:text-4xl xl:text-5xl font-bold w-2/3 md:w-2/4 lg:w-[80%] pt-2 tracking-wider" data-aos="fade-up">
+                                    <h3 className="text-left text-indigo-900 text-2xl md:text-4xl xl:text-5xl font-bold 
+                                    w-2/3 md:w-2/4 lg:w-[80%] pt-2 tracking-wider">
                                         {member.firstName}
                                         <span className="app-title ml-4">{member.lastName}</span>
                                     </h3>
-                                    <p className="text-lg md:text-xl 2xl:text-xl text-indigo-900 mt-8 w-3/4 font-[500] 2xl:w-[80%]" data-aos="fade-up">
+                                    <p className="text-lg md:text-xl 2xl:text-xl text-indigo-900 mt-8 w-3/4 font-[500] 
+                                        2xl:w-[80%]">
                                         {renderDescription(member.description)}
                                     </p>
                                 </div>

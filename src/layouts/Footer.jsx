@@ -9,14 +9,14 @@ const Footer = () => {
 
 
     return (
-        <section className='h-[50rem] lg:h-[35rem] bg-indigo-900 sticky bottom-0 -z-10'>
+        <section id='contact' className='h-[50rem] lg:h-[35rem] bg-indigo-900 '>
 
             {/* Desktop */}
 
-            <article className='relative z-1 hidden 2xl:flex flex-col justify-between'>
+            <article className=' hidden 2xl:flex flex-col justify-between '>
 
                 <div className='flex justify-evenly space-x-6 text-indigo-900 pl-32'>
-                    <div id="contact">
+                    <div >
                         <ContactCard/>
                     </div>
           

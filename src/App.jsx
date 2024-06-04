@@ -35,12 +35,15 @@ const App = () => {
     }, []);
 
     return (
-        <div>
-            <Navbar />
-            <div className="container">
+        <div className=''>
+            <Navbar className='z-20'/>
+            <div className="container relative" style={{ zIndex: 10}}>
                 <Home />
             </div>
-            <Footer />
+            <div className=""  style={{position: 'sticky', bottom: 0, zIndex: 0}} >
+                <Footer />
+            </div>
+            
         </div>
     )
 }

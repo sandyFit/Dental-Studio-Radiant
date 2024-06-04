@@ -1,18 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import reviews from '../../data/reviewsData';
 import ReviewsCarousel from '../../components/cards/ReviewsCarousel';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Reviews = () => {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lineRef = useRef(null);
+
+    useEffect(() => {
+        gsap.fromTo(
+            lineRef.current,
+            { width: '0%' },
+            {
+                width: '20%', // Change this value to your desired width
+                duration: 1.5,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: lineRef.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none',
+                },
+            }
+        );
+
+        return () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    }, []);
     return (
         <section className='flex flex-col justify-center pt-6 relative'>
 
-            <div className="flex justify-between text-med-dark mx-32 mb-6">
-                <span className='flex '>
-                   ( 04
-                </span>
-                <span className='flex '>
-                    Reviews )
-                </span>
+            <div className="w-full flex justify-end items-center text-med-dark mb-9 relative gap-6">
+                <span
+                    className="absolute left-[56rem] top-1/2 transform -translate-y-1/2 h-[0.1rem] bg-indigo-800"
+                    ref={lineRef}
+                    style={{ width: '0%' }} // Initial width set to 0%
+                ></span>
+                <span className="mr-32 relative">04 — Reviews</span>
             </div>
 
             <div className="flex flex-col items-center gap-8 relative">

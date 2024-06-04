@@ -50,7 +50,7 @@ export default {
         'custom-gradient-bg-cards-inverse': 'linear-gradient(135deg, rgb(155,81,224) 0%, rgba(6,147,227,1) 100%);',
         'grey-cards': '#2B2F32',
         'custom-gradient-btn': 'linear-gradient(135deg, rgba(6,147,227,1) 0%, rgb(155,81,224) 100%)',
-        'custom-gradient-bg-right-cards': 'radial-gradient(at bottom right, rgb(155,81,224) 0%, rgba(6,147,227,1)71%);',
+        'custom-gradient-bg-right-cards': 'radial-gradient(at bottom right, #6366f1 0%, rgba(6,147,227,1)71%);',
         'custom-gradient-bg-inverse-right-cards': 'radial-gradient(at top right, rgb(155,81,224) 0%, rgba(6,147,227,1 )71%);',
 
         'vivid-cyan-blue-to-vivid-purple': 'linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);',

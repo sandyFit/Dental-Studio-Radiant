@@ -5,17 +5,18 @@ import { FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 
 const ContactCard = () => {
     return (
-        <article className='bg-custom-gradient-bg-cards h-[38.70rem] w-[30rem] flex flex-col items-center space-y-4 
-            relative z-10'>
+        <article 
+            className='bg-custom-gradient-bg-cards h-[38.70rem] w-[30rem] flex flex-col items-center space-y-4 
+            relative z-[2]'>
             <h4 className='text-med text-center mt-20'>
                 CONTACT US
             </h4>
 
-            <h5 className='text-indigo-700 text-center text-[1.1rem] uppercase font-[700] '>
-                Reach out by phone or email
+            <h5 className='text-indigo-800 text-center text-[1.1rem] uppercase font-[700] '>
+                Call us today or book online
             </h5>
 
-            <div className="flex flex-col justify-start">        
+            <div className="flex flex-col justify-start text-indigo-80">        
                 <div className='flex gap-2 text-[1.5rem] mx-4 mt-6'> 
                     <ImLocation2/>
                     <p className='w-48 ml-2 text-[1.1rem] font-medium'>
@@ -41,7 +42,7 @@ const ContactCard = () => {
             </div>
       
             {/* ======= SOCIALS ======== */}
-            <h5 className='text-indigo-700 text-center text-[1.1rem] uppercase font-[700] pt-8'>
+            <h5 className='text-indigo-800 text-center text-[1.1rem] uppercase font-[700] pt-3'>
                 Follow us everywhere
             </h5>
              

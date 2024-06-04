@@ -116,6 +116,25 @@
 }
 
 
+/* Initialize the counter for each service card */
+.service-card {
+    counter-reset: service-counter;
+}
+
+.services-list::before {
+    counter-increment: service-counter;
+    content: counter(service-counter) ".";
+    position: absolute;
+    left: -1.5em; /* Adjust to align the counter number */
+    top: 0;
+    font-size: 1em;
+    font-weight: 700;
+    color: black;
+    mix-blend-mode: soft-light;
+}
+
+
+
 @layer base {
     html {
         @apply font-[62.5%] box-border 
@@ -129,6 +148,20 @@
         @apply cursor-pointer
     }
 }
+
+.icon {
+    font-size: 2rem;
+    color: #d4d4d8;
+    cursor: pointer;
+    transition: opacity 0.1s;
+}
+
+.icon:hover {
+    opacity: 0.75;
+}
+
+
+
 
 @layer components {
     .button {
@@ -182,17 +215,17 @@
 
     /*========= BUTTONS =========*/
     .btn-book-online {
-        @apply button text-indigo-50 bg-custom-gradient-btn  border-indigo-50
+        @apply button text-indigo-50 bg-custom-gradient-btn  border-indigo-50 z-[50]
             
     }
     .btn-book-online-transparent {
-        @apply button text-indigo-900 bg-indigo-50 bg-opacity-45 border-2  border-indigo-50
+        @apply button text-indigo-900 bg-indigo-50 bg-opacity-45 border-2  border-indigo-50 z-[50]
             
     }
 
     .transparent-btn {
         @apply button text-indigo-400 bg-transparent  
-            border-indigo-400 shadow-xl shadow-midnight
+            border-indigo-400 z-[50]
     }
 
     .text-xxxsmall {

@@ -13,20 +13,24 @@ const Hero = () => {
 
     const imgRef = useRef(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const img = imgRef.current;
 
-        // Initially hide the image and apply the clip path
-        gsap.set(img, { opacity: 0, clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" });
-
-        // Animate the image to fade in and reveal with clip path
-        gsap.to(img, {
-            opacity: 1,
+        gsap.fromTo(img, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            opacity: 0,
+        }, {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            opacity: 1,
             duration: 3,
             ease: "power2.out",
+            scrollTrigger: {
+                trigger: img,
+                start: "top 80%",
+                end: "bottom 80%",
+                once: true, // Animation will run only once
+            },
         });
-
     }, []);
     
     return (
@@ -75,13 +79,12 @@ const Hero = () => {
                     </div>
                 </article>
 
-                <article className='w-[40vw]  h-[40rem] flex'>
-                    <div className="flex w-full h-full">
-                        <img  ref={imgRef}
-                            src="/people/black-girl1.jpg"
-                            alt="Beautiful smile afroamerican girl"
-                            className='w-full h-full object-cover rounded-[20px] hero-image' />
-                    </div>
+                <article className="flex w-[40vw] h-[40vw] rounded-3xl bg-indigo-600">
+                    <img ref={imgRef}
+                        src="/people/black-girl.jpg"
+                        alt="beautiful smiley black girl"
+                        className='w-full h-full object-cover rounded-3xl'
+                    />
                 </article>
             </div>
         </section>

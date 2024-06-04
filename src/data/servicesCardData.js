@@ -2,8 +2,9 @@
 const servicesCardData = [
     {
         title: "General Dentistry",
+        iconSrc: "/icons/broken-tooth.png",
         imgSrc: '/services/general.jpeg',
-        description: "Treatments to ensure your teeth remain disease-free, functional, and aesthetic throughout your life.",
+        description: "Treatments that ensure lifelong dental health. ",
         categories: [
             // {
             //     name: "Examination",
@@ -33,6 +34,7 @@ const servicesCardData = [
     },
     {
         title: "Hygiene and Therapy",
+        iconSrc: "/icons/teeth.png",
         imgSrc: '/services/higiene.jpeg',
         description: "Treatments that keep your gums disease-free and healthy throughout life.",
         categories: [
@@ -48,6 +50,7 @@ const servicesCardData = [
     },
     {
         title: "Orthodontics",
+        iconSrc:"/icons/braces.png",
         imgSrc: '/services/brackets.jpeg',
         description: "Treatments that enable you have beautifully aligned teeth.",
         categories: [
@@ -58,7 +61,7 @@ const servicesCardData = [
             
             {
                 name: "Ceramic Braces",
-                description: "Ceramic braces — sometimes called clear braces — work the same way as metal braces. \n\nThe key difference is that the brackets, wires and ligatures are tooth-colored, so they blend in with your smile. Ceramic braces are still visible, but they're less noticeable. \n\nOne drawback to ceramic braces is that they're more fragile than metal braces, so they're more likely to break."
+                description: "Ceramic braces — sometimes called clear braces — work the same way as metal braces. \n\nThe key difference is that the brackets, wires and ligatures are tooth-colored, so they blend in with your smile. Ceramic braces are still visible, but they're less noticeable. "
             },
             {
                 name: "Night Guards",
@@ -68,8 +71,9 @@ const servicesCardData = [
     },
     {
         title: "Cosmetic Dentistry",
+        iconSrc:"/icons/dental-implant.png",
         imgSrc: '/services/cosmetic.jpeg',
-        description: "Treatments that enable you have beautifully aligned teeth.",
+        description: "Treatments for a beautiful, confident grin you'll proudly showcase every day.",
         categories: [
             {
                 name: "Teeth Whitening",

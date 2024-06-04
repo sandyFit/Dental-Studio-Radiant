@@ -4,7 +4,7 @@ import Button from '../cards/Button';
 
 const WorkingHrsTable = () => {
   return (
-    <article className='flex flex-col justify-center items-center'>      
+    <article className='flex flex-col justify-center items-center' style={{zIndex:20}}>      
       <table className='text-xxsmall-min flex  justify-center'
         style={{ borderCollapse: 'separate', borderSpacing: '0 .6rem' }}>
         <tbody>

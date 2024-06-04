@@ -13,8 +13,8 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='bg-indigo-50 w-[90.5%] bg-opacity-85 h-[88px] absolute top-8 left-16 rounded-[10px] flex items-center
-           border-[3px] border-zinc-50 z-[2]'>
+        <nav className='bg-indigo-50 w-[90.5%] bg-opacity-85 h-[88px] absolute top-8 left-16 rounded-[10px] 
+            flex items-center border-[3px] border-zinc-50 z-[20]'>
             <article className="flex items-center justify-between mx-12 w-full h-full relative">
                 <Logo />
                 <svg height="70" width="10" xmlns="http://www.w3.org/2000/svg" className='absolute left-80 top-1/2 
@@ -47,7 +47,7 @@ const Navbar = () => {
                     <line x1="5" y1="0" x2="5" y2="70" stroke="#fafafa" strokeWidth="2"/>
                 </svg>
 
-                <div className="absolute -top-4 -right-12">
+                <div className="absolute -top-4 -right-12 ">
                     {isMenuOpen && (
                         <MenuHero isMenuOpen={isMenuOpen}/>
                     )}

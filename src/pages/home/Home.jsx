@@ -97,7 +97,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="container" style={{ backgroundColor: '#cbd5e1' }}>
+        <div className="container z-10" style={{ backgroundColor: '#cbd5e1'}}>
             <section id="index" className="section">
                 <Hero />
             </section>

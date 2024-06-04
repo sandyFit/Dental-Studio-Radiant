@@ -25,14 +25,14 @@ const ReviewsCarousel = ({ reviews }) => {
             <div className="relative flex justify-center items-center w-full">
                 <div className="absolute right-[14.2rem] bottom-12 space-x-4 z-20 py-0 flex">
                     <button
-                        className='w-36 h-20 bg-indigo-700 hover:bg-indigo-800 rounded-xl
+                        className='w-36 h-20 bg-indigo-600 hover:bg-indigo-700 rounded-xl
                         text-indigo-100 text-3xl flex justify-center items-center'
                         onClick={goPrev}
                     >
                         ⋘
                     </button>
                     <button
-                        className='w-36 h-20 bg-indigo-700 hover:bg-indigo-800 rounded-xl
+                        className='w-36 h-20 bg-indigo-600 hover:bg-indigo-700 rounded-xl
                         text-indigo-100 text-3xl flex justify-center items-center'
                         onClick={goNext}
                     >

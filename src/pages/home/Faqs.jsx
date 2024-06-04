@@ -33,52 +33,107 @@ const Faqs = () => {
         );
     }, []);
 
-    return (
-        <section className='relative h-auto pt-40'>   
+    gsap.registerPlugin(ScrollTrigger);
 
-             <div className="flex justify-between text-med-dark mx-32 mb-6">
-                <span className='flex '>
-                   ( 05
-                </span>
-                <span className='flex '>
-                    Faqs )
-                </span>
+    const imgRef = useRef(null);
+
+    useEffect(() => {
+        const img = imgRef.current;
+
+        gsap.fromTo(img, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+            opacity: 0,
+        }, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            opacity: 1,
+            duration: 3,
+            delay: .6,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: img,
+                start: "top 80%",
+                end: "bottom 80%",
+                once: true, // Animation will run only once
+            },
+        });
+    }, []);
+
+
+    const lineRef = useRef(null);
+
+    useEffect(() => {
+        gsap.fromTo(
+            lineRef.current,
+            { width: '0%' },
+            {
+                width: '20%', // Change this value to your desired width
+                duration: 1.5,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: lineRef.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none',
+                },
+            }
+        );
+
+        return () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    }, []);
+
+    return (
+        <section className='relative h-auto pt-40  pb-36'>   
+            
+            <div className="w-full flex justify-end items-center text-med-dark mb-9 relative gap-6">
+                <span
+                    className="absolute left-[58.2rem] top-1/2 transform -translate-y-1/2 h-[0.1rem] bg-indigo-800"
+                    ref={lineRef}
+                    style={{ width: '0%' }} // Initial width set to 0%
+                ></span>
+                <span className="mr-32 relative">05 — Faqs</span>
             </div>
             
             <div className="w-full flex flex-col justify-center items-center relative">
 
-                <div className="w-full relative hue-effect">
-                    <h2 className='text-indigo-900 text-8xl font-[600] text-center mb-3 absolute top-0 left-[26rem]  '>
-                        Got Questions?
+                <div className="w-full relative hue-effect flex justify-center items-center">
+                    <h2 className='text-center text-indigo-900 text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
+                        w-2/3 md:w-2/4 lg:w-[80%] pt-2 lg:pt-4' >
+                        Got Questions? 
+                        <span className='app-title' style={{ margin: ' 0 1rem' }}>
+                            We have Answers!
+                        </span>   
+                        
                     </h2>
                     {/* <h2 ref={highHueRef}
                         className='text-8xl font-[600] text-center mb-3 absolute top-0 left-[26rem] whitespace-nowrap'>
                         Got Questions?
                     </h2> */}
                 </div>
-                <div>
-                    <h2 className='text-center app-title text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
-                        pt-28 pb-10'data-aos='fade-up'>
-                        We Have Answers                                          
-                    </h2>     
-                </div> 
 
-                <div className="flex flex-col justify-center items-center space-y-6 pb-60"
-                    
-                >
-                    {questions.map((question, index) => (
-                    <QuestionCard
-                        key={index}
-                        question={question.question}
-                        answer={question.answer}
-                        isOpen={index === openQuestionIndex}
-                        onToggle={() => handleToggleAccordion(index)}
-                    />
-                    ))}
+                <div className="flex w-full justify-between px-32 pt-16">
+                    <div className="flex w-[35vw] h-[35vw] rounded-3xl bg-indigo-600">
+                        <img ref={imgRef}
+                            src="/people/asian-girl.jpg"
+                            alt=""
+                            className='w-full h-full object-cover rounded-3xl'
+                        />
+                    </div>
+
+                    <div className="flex flex-col justify-start items-start ">
+                        {questions.map((question, index) => (
+                        <QuestionCard
+                            key={index}
+                            question={question.question}
+                            answer={question.answer}
+                            isOpen={index === openQuestionIndex}
+                            onToggle={() => handleToggleAccordion(index)}
+                        />
+                        ))}
+                    </div>
                 </div>
             </div>
-
-            
+          
         </section>
     )
 }

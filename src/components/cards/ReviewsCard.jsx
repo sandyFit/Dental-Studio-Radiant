@@ -34,7 +34,7 @@ const ReviewsCard = ({ name, srcImg, review }) => {
         <section className='flex justify-center items-center w-full relative'>
             <div className="flex justify-center items-center gap-6">
                 <article className="grid grid-cols-1 gap-6">
-                    <div className='w-[20.8rem] h-[20.8rem] rounded-xl bg-indigo-700  overflow-hidden '>
+                    <div className='w-[20.8rem] h-[20.8rem] rounded-xl bg-indigo-600  overflow-hidden '>
                         <img
                             ref={imgRef}
                             src={srcImg}
@@ -43,17 +43,17 @@ const ReviewsCard = ({ name, srcImg, review }) => {
                         />
                     </div>
 
-                    <div className="flex flex-col w-[20.8rem] h-20 bg-indigo-700  rounded-xl justify-center 
+                    <div className="flex flex-col w-[20.8rem] h-20 bg-indigo-600  rounded-xl justify-center 
                         items-center">
-                        <h4 className='text-indigo-50 text-[1.6rem] font-[500]'>
+                        <h4 className='text-indigo-200 text-[1.6rem] font-[500]'>
                             {name}
                         </h4>
                     </div>
                 </article>
 
                 <article className="grid grid-cols-1 gap-6">
-                    <div className="w-[44rem] h-[20.8rem] bg-indigo-700  hover:bg-indigo-800 rounded-2xl 
-                    text-indigo-50 px-16 relative">
+                    <div className="w-[44rem] h-[20.8rem] bg-indigo-600  hover:bg-indigo-700 rounded-2xl 
+                    text-indigo-200 px-16 relative">
                         <span className='text-[12rem] absolute bottom-16'>”</span>
                         <p className='text-[1.08rem] font-[400] mt-[8rem] m-0 p-0'>
                             {renderDescription(review)}

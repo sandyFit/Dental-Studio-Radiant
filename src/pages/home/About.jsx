@@ -47,7 +47,6 @@ const About = () => {
         }
     };
 
-
     const scrollToTop = () => {
         scroll.scrollToTop();
     }
@@ -75,12 +74,13 @@ const About = () => {
         const img = imgRef.current;
 
         gsap.fromTo(img, {
-            clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
             opacity: 0,
         }, {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             opacity: 1,
             duration: 3,
+            delay: .5,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: img,
@@ -91,17 +91,43 @@ const About = () => {
         });
     }, []);
     
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lineRef = useRef(null);
+
+    useEffect(() => {
+        gsap.fromTo(
+            lineRef.current,
+            { width: '0%' },
+            {
+                width: '20%', // Change this value to your desired width
+                duration: 1.5,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: lineRef.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none none',
+                },
+            }
+        );
+
+        return () => {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+        };
+    }, []);
+    
+    
     return (
         <Element id='about'
             className='flex flex-col pt-[3rem] rounded-t-[50px] w-full mb-[10vw]' >
 
-             <div className="w-full flex justify-between text-med-dark px-32 mb-4">
-                <span className='flex '>
-                   ( 01
-                </span>
-                <span className='flex '>
-                    About Us )
-                </span>
+           <div className="w-full flex justify-end items-center text-med-dark mb-9 relative gap-6">
+                <span
+                    className="absolute left-[58rem] top-1/2 transform -translate-y-1/2 h-[0.1rem] bg-indigo-800"
+                    ref={lineRef}
+                    style={{ width: '0%' }} // Initial width set to 0%
+                ></span>
+                <span className="mr-32 relative">01 — About</span>
             </div>
 
             <div className="relative">
@@ -140,7 +166,7 @@ const About = () => {
             </div>
 
             <div className="w-full flex flex-col xl:flex-row justify-between items-center py-[3rem] px-32 relative">                             
-                <article className="w-[35vw] rounded-[20px] bg-indigo-500 overflow-hidden">
+                <article className="w-[35vw] rounded-[20px] bg-indigo-600 overflow-hidden">
                 {/* ABOUT IMAGE */}                                   
                     <img  ref={imgRef}                     
                         src="/images/dental-studio.jpg"
