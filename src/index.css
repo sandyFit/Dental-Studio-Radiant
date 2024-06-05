@@ -161,7 +161,9 @@
 }
 
 
-
+.form {
+    clip-path: polygon(100% 0, 100% 50%, 100% 54%, 0 55%, 34% 55%, 0 0);
+}
 
 @layer components {
     .button {

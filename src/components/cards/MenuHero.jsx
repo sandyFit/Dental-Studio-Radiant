@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { BsTwitter } from 'react-icons/bs';
+import { BsTwitter, BsTwitterX } from 'react-icons/bs';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FaInstagram } from 'react-icons/fa';
 
 const MenuHero = ({ isMenuOpen }) => {
     return (
         <article className='flex flex-col justify-center absolute top-0 right-0 z-[40] rounded-3xl 
-            bg-custom-gradient-bg-cards pr-20 pl-12 pt-24 pb-16 shadow-lg shadow-midnight '
+            bg-custom-gradient-bg-cards pr-52 pl-12 pt-24 pb-16 shadow-lg shadow-midnight '
             style={{
                 transform: isMenuOpen ? 'scale(1)' : 'scale(0)',
                 transformOrigin: 'top right',
@@ -39,7 +39,7 @@ const MenuHero = ({ isMenuOpen }) => {
                     </p>
                 </div>
 
-                <div className='flex flex-col justify-between items-center gap-8 mt-10'
+                <div className='flex flex-col justify-between items-center gap-8 mt-10 absolute right-[4rem] bottom-16'
                     style={{zIndex: 1000}}>
                     <FaInstagram 
                         style={{ fontSize: '2rem', color: '#d4d4d8', cursor: 'pointer', transition: 'opacity 0.1s' }}
@@ -50,7 +50,7 @@ const MenuHero = ({ isMenuOpen }) => {
                         onMouseOver={(e) => e.target.style.opacity = 0.75}
                         onMouseOut={(e) => e.target.style.opacity = 1}
                     />
-                    <BsTwitter 
+                    <BsTwitterX 
                         style={{ fontSize: '1.8rem', color: '#d4d4d8', cursor: 'pointer', transition: 'opacity 0.1s', marginTop: '4px' }}
                         onMouseOver={(e) => e.target.style.opacity = 0.75}
                         onMouseOut={(e) => e.target.style.opacity = 1}

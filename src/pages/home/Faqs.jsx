@@ -96,7 +96,7 @@ const Faqs = () => {
             
             <div className="w-full flex flex-col justify-center items-center relative">
 
-                <div className="w-full relative hue-effect flex justify-center items-center">
+                <div className="w-full relative hue-effect flex flex-col justify-center items-center">
                     <h2 className='text-center text-indigo-900 text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold
                         w-2/3 md:w-2/4 lg:w-[80%] pt-2 lg:pt-4' >
                         Got Questions? 
@@ -105,6 +105,13 @@ const Faqs = () => {
                         </span>   
                         
                     </h2>
+
+                     <p
+                        className='text-center text-lg md:text-xl 2xl:text-[1.4rem] text-indigo-900 font-[600] mt-10 w-3/4 
+                        2xl:w-[70%] z-20'
+                    >
+                        Find answers to commonly asked questions about dental care below.
+                    </p>
                     {/* <h2 ref={highHueRef}
                         className='text-8xl font-[600] text-center mb-3 absolute top-0 left-[26rem] whitespace-nowrap'>
                         Got Questions?

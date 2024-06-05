@@ -6,7 +6,7 @@ const ServiceCard = ({ service, index }) => (
 
         <div className="flex flex-col gap-6">
             
-            <div className="flex justify-center items-center w-full py-3 bg-indigo-300 rounded-2xl">
+            <div className="flex justify-center items-center w-full py-3 bg-indigo-300 border-[3px] border-indigo-50 rounded-2xl">
                 <div className='w-full flex justify-between items-center px-6'>
                     <div className="flex items-center gap-3">
                         <div className="flex w-16 h-16 rounded-full bg-indigo-50 justify-center items-center">
@@ -16,7 +16,7 @@ const ServiceCard = ({ service, index }) => (
                             {service.title}
                         </h2>
                     </div>
-                    <span className='app-title text-5xl font-[900]'>{`0${index + 1}.`}</span>                                           
+                    <span className='app-title text-5xl font-[900] '>{`0${index + 1}.`}</span>                                           
                 </div>
             </div>
 

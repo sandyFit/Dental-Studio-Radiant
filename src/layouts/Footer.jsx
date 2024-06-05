@@ -9,7 +9,7 @@ const Footer = () => {
 
 
     return (
-        <section id='contact' className='h-[50rem] lg:h-[35rem] bg-indigo-900 '>
+        <section  className='h-[50rem] lg:h-[35rem] bg-indigo-900 '>
 
             {/* Desktop */}
 
